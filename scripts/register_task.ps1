@@ -1,4 +1,4 @@
-<#
+﻿<#
 .SYNOPSIS
 注册 Windows 定时任务，每天自动执行抖音文案采集
 
@@ -76,7 +76,7 @@ $Settings = New-ScheduledTaskSettingsSet `
 
 $Principal = New-ScheduledTaskPrincipal `
     -UserId $env:USERNAME `
-    -LogonType S4U `
+    -LogonType Interactive `
     -RunLevel Limited
 
 Write-Host "📝 正在注册定时任务: $TaskName" -ForegroundColor Yellow
