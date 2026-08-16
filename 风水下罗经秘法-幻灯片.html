@@ -1,0 +1,1030 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>风水下罗经秘法 · 幻灯片</title>
+<style>
+  @page { size: 280mm 158mm; margin: 0; background: #f5f4ed; }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --parchment:  #f5f4ed;
+    --ivory:      #faf9f5;
+    --near-black: #141413;
+    --dark-warm:  #3d3d3a;
+    --olive:      #504e49;
+    --stone:      #6b6a64;
+    --brand:      #1B365D;
+    --brand-tint: #EEF2F7;
+    --border:     #e8e6dc;
+    --serif: "Source Han Serif SC", "Noto Serif CJK SC", "Songti SC", "STSong", "SimSun", Georgia, serif;
+    --sans: var(--serif);
+  }
+
+  body {
+    color: var(--near-black);
+    font-family: var(--sans);
+    font-size: 13pt;
+    line-height: 1.5;
+  }
+
+  .slide {
+    width: 280mm;
+    height: 158mm;
+    padding: 14mm 18mm;
+    background: var(--parchment);
+    break-after: page;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+  .slide:last-child { break-after: auto; }
+  .slide-content { flex: 1; }
+
+  .page-num {
+    position: absolute;
+    bottom: 10mm;
+    right: 18mm;
+    font-size: 9pt;
+    color: var(--stone);
+  }
+  .footer-mark {
+    position: absolute;
+    bottom: 10mm;
+    left: 18mm;
+    font-size: 8pt;
+    color: var(--stone);
+    letter-spacing: 1pt;
+  }
+
+  /* 封面 */
+  .cover {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .cover h1 {
+    font-size: 42pt;
+    font-weight: 500;
+    line-height: 1.15;
+    color: var(--near-black);
+    margin-bottom: 14pt;
+    letter-spacing: 4pt;
+  }
+  .cover .sub {
+    font-size: 16pt;
+    color: var(--brand);
+    line-height: 1.5;
+    letter-spacing: 2pt;
+    margin-bottom: 30pt;
+  }
+  .cover .divider {
+    width: 50mm;
+    height: 1pt;
+    background: var(--brand);
+    margin-bottom: 24pt;
+  }
+  .cover .meta {
+    font-size: 11pt;
+    color: var(--stone);
+    line-height: 2;
+  }
+
+  /* 标题层级 */
+  .eyebrow {
+    font-size: 9.5pt;
+    letter-spacing: 2pt;
+    color: var(--stone);
+    margin-bottom: 2pt;
+  }
+  h1 {
+    font-size: 26pt;
+    font-weight: 500;
+    line-height: 1.25;
+    color: var(--near-black);
+    margin-bottom: 10pt;
+    border-left: 3pt solid var(--brand);
+    padding-left: 10pt;
+  }
+  h2 {
+    font-size: 18pt;
+    font-weight: 500;
+    line-height: 1.3;
+    color: var(--brand);
+    margin-bottom: 6pt;
+  }
+  h3 {
+    font-size: 15pt;
+    font-weight: 500;
+    line-height: 1.35;
+    color: var(--dark-warm);
+    margin-bottom: 6pt;
+  }
+
+  /* 文本 */
+  p {
+    margin-bottom: 6pt;
+    line-height: 1.5;
+    font-size: 14pt;
+  }
+  p.small { font-size: 12pt; color: var(--olive); }
+
+  ul {
+    margin: 4pt 0 8pt 0;
+    padding-left: 1.5em;
+    line-height: 1.5;
+  }
+  ul li {
+    font-size: 13pt;
+    margin-bottom: 3pt;
+  }
+  ul li::marker { color: var(--brand); }
+
+  .highlight {
+    color: var(--brand);
+    font-weight: 500;
+  }
+  .verse {
+    border-left: 2.5pt solid var(--brand);
+    margin: 6pt 0;
+    padding: 4pt 0 4pt 14pt;
+    font-size: 15pt;
+    line-height: 1.7;
+    color: var(--dark-warm);
+  }
+
+  /* 两列 */
+  .c2 {
+    display: flex;
+    gap: 18pt;
+    flex: 1;
+  }
+  .c2 > div { flex: 1; }
+
+  /* 四格 2x2 */
+  .t2x2 { width: 100%; border-collapse: separate; border-spacing: 16pt 12pt; margin: -12pt -16pt; }
+  .t2x2 td { vertical-align: top; width: 50%; }
+  .t2x2 td h3 { font-size: 14pt; }
+  .t2x2 td p { font-size: 12pt; }
+
+  /* 图片 */
+  .img-slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .img-slide img {
+    max-width: 90%;
+    max-height: 110mm;
+    height: auto;
+    border-radius: 3pt;
+    box-shadow: 0 1pt 4pt rgba(0,0,0,0.08);
+  }
+  .img-slide .rotate-90 {
+    transform: rotate(-90deg);
+  }
+  .img-slide .img-caption {
+    font-size: 12pt;
+    color: var(--stone);
+    margin-top: 8pt;
+  }
+
+  /* 底部结论框 */
+  .co {
+    font-size: 13pt;
+    font-weight: 500;
+    color: var(--brand);
+    border-top: 1pt solid var(--border);
+    padding-top: 8pt;
+    margin-top: auto;
+  }
+
+  .section-title {
+    font-size: 32pt;
+    font-weight: 500;
+    color: var(--brand);
+    text-align: center;
+    letter-spacing: 3pt;
+    margin: auto;
+  }
+</style>
+</head>
+<body>
+
+<!-- ═════ 封面 ═════ -->
+<section class="slide cover">
+  <h1>风水下罗经秘法</h1>
+  <div class="divider"></div>
+  <div class="sub">先生慈悲·下罗经看阳宅坟地秘法全书</div>
+  <div class="meta">阴阳先生实用罗经秘法 · 共十四讲</div>
+</section>
+
+<!-- ═════ 第一讲 ═════ -->
+<section class="slide">
+  <span class="eyebrow">01 · 罗经实用构成</span>
+  <h1>天池八针</h1>
+  <ul>
+    <li><span class="highlight">一搪</span> — 针泛不定，归中线→怪石深潭，大凶</li>
+    <li><span class="highlight">二兑</span> — 针横水面，不归子午→怪石虫肿，大凶</li>
+    <li><span class="highlight">三欺</span> — 针见石闪去，转而不稳→潭溪井池</li>
+    <li><span class="highlight">四拉</span> — 针半沉半浮→坟冢伏尸</li>
+    <li><span class="highlight">五沉</span> — 三次皆沉→坑尸古器</li>
+    <li><span class="highlight">六逆</span> — 针眼随石→忤逆伏尸，败家甚速</li>
+    <li><span class="highlight">七侧</span> — 偏东偏西→神堂古刹，不可用</li>
+    <li><span class="highlight">八正</span> — 针尖随石，归中线→大吉，出官贵</li>
+  </ul>
+  <div class="page-num">01</div>
+  <div class="footer-mark">风水下罗经秘法</div>
+</section>
+
+<section class="slide">
+  <span class="eyebrow">01 · 罗经实用构成</span>
+  <h1>地盘二十四山正针</h1>
+  <p class="small">地盘正针乃最重要的一层，其他可以不用，这一层必须有。</p>
+  <ul>
+    <li>用来立向及测量坐向</li>
+    <li>走马观砂水，配合形势</li>
+    <li>判断阴宅吉凶，有时只用此层即可</li>
+  </ul>
+  <div class="page-num">02</div>
+  <div class="footer-mark">风水下罗经秘法</div>
+</section>
+
+<section class="slide img-slide">
+  <img src="images/1.png" alt="地盘二十四山正针图">
+  <div class="img-caption"><strong>图一：地盘二十四山正针图</strong></div>
+  <div class="page-num">03</div>
+  <div class="footer-mark">风水下罗经秘法</div>
+</section>
+
+<section class="slide">
+  <span class="eyebrow">01 · 罗经实用构成</span>
+  <h1>七十二格龙</h1>
+  <ul>
+    <li>看山势来龙的吉凶</li>
+    <li>判断龙的旺衰</li>
+  </ul>
+  <div class="page-num">04</div>
+  <div class="footer-mark">风水下罗经秘法</div>
+</section>
+
+<section class="slide img-slide">
+  <img src="images/2.png" alt="穿山七十二龙盘">
+  <div class="img-caption"><strong>图二：穿山七十二龙盘</strong></div>
+  <div class="page-num">05</div>
+  <div class="footer-mark">风水下罗经秘法</div>
+</section>
+
+<section class="slide">
+  <span class="eyebrow">01 · 罗经实用构成</span>
+  <h1>人盘中针 · 天盘缝针</h1>
+  <div class="c2">
+    <div>
+      <h3>人盘中针</h3>
+      <p class="small">赖公发明，主要用来看砂的吉凶</p>
+    </div>
+    <div>
+      <h3>天盘缝针</h3>
+      <p class="small">主要用来测来水去水的吉凶</p>
+    </div>
+  </div>
+  <div class="page-num">06</div>
+  <div class="footer-mark">风水下罗经秘法</div>
+</section>
+
+<section class="slide img-slide">
+  <img src="images/3.png" alt="人盘中针图">
+  <div class="img-caption"><strong>图三：人盘中针图</strong></div>
+  <div class="page-num">07</div>
+  <div class="footer-mark">风水下罗经秘法</div>
+</section>
+
+<section class="slide img-slide">
+  <img src="images/4.png" alt="天盘缝针图">
+  <div class="img-caption"><strong>图四：天盘缝针图（第三层为天盘缝针）</strong></div>
+  <div class="page-num">08</div>
+  <div class="footer-mark">风水下罗经秘法</div>
+</section>
+
+<section class="slide">
+  <span class="eyebrow">01 · 罗经实用构成</span>
+  <h1>地盘分金</h1>
+  <ul>
+    <li>主要用来立坟分度数</li>
+    <li>"差一度，贫富失千里"</li>
+    <li>每山分为五份，空亡处为龟甲不可用</li>
+    <li>分金纳音：以去世者命音克分金为吉</li>
+  </ul>
+  <div class="page-num">09</div>
+  <div class="footer-mark">风水下罗经秘法</div>
+</section>
+
+<section class="slide img-slide">
+  <img src="images/5.png" alt="地盘分金图">
+  <div class="img-caption"><strong>图五：地盘分金图（第二层为分金）</strong></div>
+  <div class="page-num">10</div>
+  <div class="footer-mark">风水下罗经秘法</div>
+</section>
+
+<section class="slide">
+  <span class="eyebrow">01 · 罗经实用构成</span>
+  <h1>辅助层面：黄泉水</h1>
+  <div class="verse">
+    庚丁坤上是黄泉，乙丙巽方是黄泉，<br>
+    甲癸艮上是黄泉，辛壬乾上是黄泉。
+  </div>
+  <p class="small">用法：立庚丁向，坤方有来水即犯黄泉水，必遭大祸。用天盘缝针测量。</p>
+  <div class="page-num">11</div>
+  <div class="footer-mark">风水下罗经秘法</div>
+</section>
+
+<section class="slide">
+  <span class="eyebrow">01 · 罗经实用构成</span>
+  <h1>辅助层面：八煞</h1>
+  <div class="verse">
+    坎龙坤兔震山猴，巽鸡乾马兑蛇头，<br>
+    艮虎离猪为八煞。
+  </div>
+  <ul>
+    <li>择日：坐北（坎）修造不可择辰日</li>
+    <li>消砂：坎宅辰方有砂即犯八煞</li>
+    <li>立向：得坎龙不可立辰山之向</li>
+  </ul>
+  <div class="page-num">12</div>
+  <div class="footer-mark">风水下罗经秘法</div>
+</section>
+
+<section class="slide">
+  <span class="eyebrow">01 · 罗经实用构成</span>
+  <h1>九星兼卦</h1>
+  <ul>
+    <li>玄空九星年运立向之用</li>
+    <li>一山十五度，中间7.5度为正向</li>
+    <li>超过三度需用兼卦替代</li>
+  </ul>
+  <div class="page-num">13</div>
+  <div class="footer-mark">风水下罗经秘法</div>
+</section>
+
+<section class="slide img-slide">
+  <img src="images/6.png" alt="九星兼卦图">
+  <div class="img-caption"><strong>图六：九星兼卦图</strong></div>
+  <div class="page-num">14</div>
+  <div class="footer-mark">风水下罗经秘法</div>
+</section>
+
+<!-- ═════ 第二讲 ═════ -->
+<section class="slide">
+  <span class="eyebrow">02 · 地理风水师禁日及吉日时</span>
+  <h1>四季杀师日</h1>
+  <p class="small">以下日子不可把罗经放在地上，否则产生罗睺，对先生不利。</p>
+  <table class="t2x2">
+    <tr>
+      <td><span class="highlight">春季：</span>甲寅、甲戌、甲午</td>
+      <td><span class="highlight">夏季：</span>己丑、己巳、己酉</td>
+    </tr>
+    <tr>
+      <td><span class="highlight">秋季：</span>甲子、甲辰、甲申</td>
+      <td><span class="highlight">冬季：</span>己卯、己未、己亥</td>
+    </tr>
+  </table>
+  <div class="page-num">15</div>
+  <div class="footer-mark">风水下罗经秘法</div>
+</section>
+
+<section class="slide">
+  <span class="eyebrow">02 · 地理风水师禁日及吉日时</span>
+  <h1>造葬杀师时</h1>
+  <p class="small">看坟地点穴下罗经，不可在上述时辰</p>
+  <div class="c2">
+    <div>
+      <p class="small">子日丑时 · 丑日巳时 · 寅日寅时<br>
+      卯日未时 · 辰月子时 · 巳日巳时<br>
+      午日卯时 · 未日午时</p>
+    </div>
+    <div>
+      <p class="small">申日戌时 · 酉日卯时<br>
+      戌日戌时 · 亥日戌时</p>
+    </div>
+  </div>
+  <h2 style="margin-top:8pt;">修造动土吉日时</h2>
+  <p class="small">甲卯 · 乙寅 · 丙亥丑 · 丁丑寅亥 · 戊卯<br>巳寅 · 庚戌 · 辛辰申 · 壬癸巳</p>
+  <div class="page-num">16</div>
+  <div class="footer-mark">风水下罗经秘法</div>
+</section>
+
+<!-- ═════ 第三讲 ═════ -->
+<section class="slide">
+  <span class="eyebrow">03 · 地盘正针过路阴阳应用秘法</span>
+  <h1>找中心 · 分八卦</h1>
+  <div class="c2">
+    <div>
+      <h3>找中心</h3>
+      <ul>
+        <li>方形宅：两条对角线交点</li>
+        <li>不规则：作延长线假设方形</li>
+        <li>阴宅中心在坟顶尖</li>
+      </ul>
+    </div>
+    <div>
+      <h3>分八卦</h3>
+      <ul>
+        <li>依据后天文王八卦九宫</li>
+        <li>北方坎位，南方离位</li>
+        <li>依次类推分八个方位</li>
+      </ul>
+    </div>
+  </div>
+  <div class="page-num">17</div>
+  <div class="footer-mark">风水下罗经秘法</div>
+</section>
+
+<section class="slide img-slide">
+  <img src="images/7.jpeg" alt="找中心点示意图">
+  <div class="img-caption"><strong>图七：找中心点示意图</strong></div>
+  <div class="page-num">18</div>
+  <div class="footer-mark">风水下罗经秘法</div>
+</section>
+
+<section class="slide">
+  <span class="eyebrow">03 · 过路阴阳</span>
+  <h1>砂水的区分</h1>
+  <div class="c2">
+    <div>
+      <h3>何为砂？</h3>
+      <p class="small">环境中固定的不流动物体</p>
+      <p class="small">房屋 · 高楼 · 电线杆 · 烟囱 · 水塔<br>高山 · 土坡 · 石头 · 石狮 · 变压器<br>庙 · 家具 · 电器</p>
+    </div>
+    <div>
+      <h3>何为水？</h3>
+      <p class="small">环境中流动不稳定的环境</p>
+      <p class="small">河流 · 池塘 · 井<br>车辆多的马路 · 土沟 · 空地<br>露天厕所</p>
+    </div>
+  </div>
+  <div class="page-num">19</div>
+  <div class="footer-mark">风水下罗经秘法</div>
+</section>
+
+<section class="slide">
+  <span class="eyebrow">03 · 过路阴阳</span>
+  <h1>吉凶判断原则</h1>
+  <div class="verse">一、二、三、四宫 → 得砂吉，得水凶<br>六、七、八、九宫 → 得水吉，得砂凶</div>
+  <table class="t2x2">
+    <tr>
+      <td><span class="highlight">坎一宫</span> 劳卦 — 北方水→人累</td>
+      <td><span class="highlight">坤二宫</span> 淫卦 — 女人老母</td>
+    </tr>
+    <tr>
+      <td><span class="highlight">震三宫</span> 贵卦 — 东方砂→出贵人</td>
+      <td><span class="highlight">巽四宫</span> 淫卦 — 巽水→淫荡女</td>
+    </tr>
+    <tr>
+      <td><span class="highlight">乾六宫</span> 寿卦/文昌 — 西北水→文人</td>
+      <td><span class="highlight">兑七宫</span> 说卦 — 兑水→女儿美</td>
+    </tr>
+    <tr>
+      <td><span class="highlight">艮八宫</span> 子卦 — 艮水→儿孙满堂</td>
+      <td><span class="highlight">离九宫</span> 财卦 — 离水→财满源</td>
+    </tr>
+  </table>
+  <div class="page-num">20</div>
+  <div class="footer-mark">风水下罗经秘法</div>
+</section>
+
+<section class="slide">
+  <span class="eyebrow">03 · 过路阴阳</span>
+  <h1>六亲分法</h1>
+  <div class="c2">
+    <div>
+      <h3>男方</h3>
+      <p class="small">老大（1、4、7房）：3宫、8宫</p>
+      <p class="small">老二（2、5、8房）：1宫、3宫</p>
+      <p class="small">老三（3、6、9房）：8宫、6宫</p>
+    </div>
+    <div>
+      <h3>女方</h3>
+      <p class="small">老大（1、4、7房）：4宫、2宫</p>
+      <p class="small">老二（2、5、8房）：9宫、3宫</p>
+      <p class="small">老三（3、6、9房）：7宫、4宫</p>
+    </div>
+  </div>
+  <div class="co">东方河为水→老大不得力；东北砂+信号塔→儿子灾祸大</div>
+  <div class="page-num">21</div>
+  <div class="footer-mark">风水下罗经秘法</div>
+</section>
+
+
+<!-- ═════ 第四讲（概览，太长只选关键） ═════ -->
+<section class="slide">
+  <div class="section-title">第四讲 · 正针二十四山<br>判断吉凶</div>
+  <p style="text-align:center;margin-top:12pt;font-size:12pt;color:var(--olive);">二十四山砂水断语，各宫详论吉凶</p>
+  <div class="page-num">23</div>
+  <div class="footer-mark">风水下罗经秘法</div>
+</section>
+
+<section class="slide">
+  <span class="eyebrow">04 · 正针二十四山</span>
+  <h1>坎一宫 / 坤二宫</h1>
+  <div class="c2">
+    <div>
+      <h3>坎宫</h3>
+      <p class="small">水凶：壬水没儿郎，先绝二房</p>
+      <p class="small">砂吉：壬砂发武资，子砂发富</p>
+      <p class="small">癸砂女当家，惧内</p>
+    </div>
+    <div>
+      <h3>坤宫</h3>
+      <p class="small">水凶：未水出盗贼，坤水伤妻房</p>
+      <p class="small">砂吉：未砂发财（行为不正）</p>
+      <p class="small">坤砂妇女持家政</p>
+    </div>
+  </div>
+  <div class="page-num">24</div>
+  <div class="footer-mark">风水下罗经秘法</div>
+</section>
+
+<section class="slide">
+  <span class="eyebrow">04 · 正针二十四山</span>
+  <h1>震三宫 / 巽四宫</h1>
+  <div class="c2">
+    <div>
+      <h3>震宫</h3>
+      <p class="small">水凶：甲水主贫穷，长房不兴</p>
+      <p class="small">砂吉：卯砂能致富，乙砂发文章</p>
+    </div>
+    <div>
+      <h3>巽宫</h3>
+      <p class="small">水凶：辰水遇贼，巽水女淫乱</p>
+      <p class="small">砂吉：巽砂女主家，巳砂文书</p>
+    </div>
+  </div>
+  <div class="page-num">25</div>
+  <div class="footer-mark">风水下罗经秘法</div>
+</section>
+
+<section class="slide">
+  <span class="eyebrow">04 · 正针二十四山</span>
+  <h1>乾六宫 / 兑七宫</h1>
+  <div class="c2">
+    <div>
+      <h3>乾宫</h3>
+      <p class="small">水吉：乾水长，老父兴家寿而康</p>
+      <p class="small">亥水→小儿夜啼</p>
+      <p class="small">砂凶：乾砂老父伤，戌砂主回禄</p>
+    </div>
+    <div>
+      <h3>兑宫</h3>
+      <p class="small">水吉：庚水武爵封，辛水文人夸</p>
+      <p class="small">酉水→花柳风流</p>
+      <p class="small">砂凶：庚砂惹祸，辛砂主肺痨</p>
+    </div>
+  </div>
+  <div class="page-num">26</div>
+  <div class="footer-mark">风水下罗经秘法</div>
+</section>
+
+<section class="slide">
+  <span class="eyebrow">04 · 正针二十四山</span>
+  <h1>艮八宫 / 离九宫</h1>
+  <div class="c2">
+    <div>
+      <h3>艮宫</h3>
+      <p class="small">水吉：丑水发田庄，艮水儿郎多</p>
+      <p class="small">砂凶：丑砂为贼盗，艮砂没儿郎</p>
+    </div>
+    <div>
+      <h3>离宫</h3>
+      <p class="small">水吉：丙水催官催财，丁水人文盛</p>
+      <p class="small">午水→桃花滚滚</p>
+      <p class="small">砂凶：丙砂中子目盲，午砂出秃郎</p>
+    </div>
+  </div>
+  <div class="page-num">27</div>
+  <div class="footer-mark">风水下罗经秘法</div>
+</section>
+
+<section class="slide">
+  <span class="eyebrow">04 · 正针二十四山</span>
+  <h1>特殊情况砂水区分</h1>
+  <div class="verse">高一寸为砂，低一寸为水</div>
+  <p class="small">用法：中心相对同等位置，高的为砂，低的为水</p>
+  <p class="small">例：东西相同距离10米，东高为砂，西矮为水</p>
+  <div class="page-num">28</div>
+  <div class="footer-mark">风水下罗经秘法</div>
+</section>
+
+<section class="slide img-slide">
+  <img src="images/9.jpeg" alt="特殊情况砂水区分">
+  <div class="img-caption"><strong>图九：特殊情况砂水区分</strong></div>
+  <div class="page-num">29</div>
+  <div class="footer-mark">风水下罗经秘法</div>
+</section>
+
+<!-- ═════ 第五讲 ═════ -->
+<section class="slide">
+  <span class="eyebrow">05 · 正针立向九星地运</span>
+  <h1>宅坟建造运期</h1>
+  <p class="small" style="margin-bottom:8pt;">每二十年为一运，循环往复：</p>
+  <div class="c2">
+    <div>
+      <p class="small"><span class="highlight">1924—1943</span> 四运</p>
+      <p class="small"><span class="highlight">1944—1963</span> 五运</p>
+      <p class="small"><span class="highlight">1964—1983</span> 六运</p>
+      <p class="small"><span class="highlight">1984—2003</span> 七运</p>
+    </div>
+    <div>
+      <p class="small"><span class="highlight">2004—2023</span> 八运</p>
+      <p class="small"><span class="highlight">2024—2043</span> 九运</p>
+      <p class="small"><span class="highlight">2044—2063</span> 一运</p>
+    </div>
+  </div>
+  <div class="page-num">30</div>
+  <div class="footer-mark">风水下罗经秘法</div>
+</section>
+
+<section class="slide">
+  <span class="eyebrow">05 · 正针立向九星地运</span>
+  <h1>布运盘</h1>
+  <ul>
+    <li>查出几运宅坟，运数放中宫，顺布九宫</li>
+    <li>用正针测量坐向</li>
+    <li>阳宅：大门前七步下盘，红线指门中心</li>
+    <li>阴宅：罗经一端贴近墓碑</li>
+  </ul>
+  <div class="page-num">31</div>
+  <div class="footer-mark">风水下罗经秘法</div>
+</section>
+
+<section class="slide img-slide">
+  <img src="images/10.png" alt="布运盘">
+  <div class="img-caption"><strong>图十：布运盘示例</strong></div>
+  <div class="page-num">32</div>
+  <div class="footer-mark">风水下罗经秘法</div>
+</section>
+
+<section class="slide img-slide">
+  <img src="images/11.png" alt="下罗经测量坐向">
+  <div class="img-caption"><strong>图十一：下罗经测量坐向图解</strong></div>
+  <div class="page-num">33</div>
+  <div class="footer-mark">风水下罗经秘法</div>
+</section>
+
+<section class="slide">
+  <span class="eyebrow">05 · 正针立向九星地运</span>
+  <h1>布山向盘 — 举例</h1>
+  <p class="small">坐丑山未向，六运坟</p>
+  <ul>
+    <li>丑山在8宫（丑艮寅），坐运9→到9宫找丙→丙阳顺布</li>
+    <li>未向在2宫（未坤申），坐运3→到3宫找甲→甲阳顺布</li>
+    <li>吉凶关键：<span class="highlight">坐山管人丁，向水管财</span></li>
+    <li>本例山向星"6"互换，乃"龙上山，神下水"，大凶</li>
+  </ul>
+  <div class="page-num">34</div>
+  <div class="footer-mark">风水下罗经秘法</div>
+</section>
+
+<section class="slide img-slide">
+  <img src="images/12.png" alt="丑山未向六运坟">
+  <div class="img-caption"><strong>图十二：丑山未向六运坟</strong></div>
+  <div class="page-num">35</div>
+  <div class="footer-mark">风水下罗经秘法</div>
+</section>
+
+<section class="slide img-slide">
+  <img src="images/13.png" alt="二十四山阴阳">
+  <div class="img-caption"><strong>图十三：二十四山阴阳分类</strong></div>
+  <div class="page-num">36</div>
+  <div class="footer-mark">风水下罗经秘法</div>
+</section>
+
+<section class="slide img-slide">
+  <img src="images/14.png" alt="布山星顺逆">
+  <div class="img-caption"><strong>图十四：布山星顺逆</strong></div>
+  <div class="page-num">37</div>
+  <div class="footer-mark">风水下罗经秘法</div>
+</section>
+
+<section class="slide img-slide">
+  <img src="images/15.png" alt="布向星顺逆">
+  <div class="img-caption"><strong>图十五：布向星顺逆</strong></div>
+  <div class="page-num">38</div>
+  <div class="footer-mark">风水下罗经秘法</div>
+</section>
+
+<!-- ═════ 第六讲 ═════ -->
+<section class="slide">
+  <span class="eyebrow">06 · 正针挨星消砂</span>
+  <h1>九星吉凶</h1>
+  <div class="c2">
+    <div>
+      <p class="small"><span class="highlight">1 贪狼</span> 吉·聪明催丁</p>
+      <p class="small"><span class="highlight">2 巨门</span> 吉·催财</p>
+      <p class="small"><span class="highlight">3 禄存</span> 凶·横祸血光</p>
+      <p class="small"><span class="highlight">4 文曲</span> 吉凶参半</p>
+      <p class="small"><span class="highlight">5 廉贞</span> 凶·疾病逆子</p>
+    </div>
+    <div>
+      <p class="small"><span class="highlight">6 武曲</span> 吉·催官</p>
+      <p class="small"><span class="highlight">7 破军</span> 凶·盗贼败家</p>
+      <p class="small"><span class="highlight">8 左辅</span> 吉·富贵</p>
+      <p class="small"><span class="highlight">9 右弼</span> 吉·同8数</p>
+    </div>
+  </div>
+  <div class="page-num">39</div>
+  <div class="footer-mark">风水下罗经秘法</div>
+</section>
+
+<section class="slide">
+  <span class="eyebrow">06 · 正针挨星消砂</span>
+  <h1>挨星顺序与起宫</h1>
+  <div class="verse">挨星顺序：2、8、1、4、3、9、7、6</div>
+  <p class="small">起宫：1从2起，2从3起，3从4起……</p>
+  <p class="small">例：坐壬向丙，壬在1宫→从2宫起顺布</p>
+  <p class="small">分组：1-2-3（一组）· 4-5-6（二组）· 7-8-9（三组）</p>
+  <div class="page-num">40</div>
+  <div class="footer-mark">风水下罗经秘法</div>
+</section>
+
+<section class="slide img-slide">
+  <img src="images/16.png" alt="挨星起宫">
+  <div class="img-caption"><strong>图十六：挨星起宫示例</strong></div>
+  <div class="page-num">41</div>
+  <div class="footer-mark">风水下罗经秘法</div>
+</section>
+
+<section class="slide img-slide">
+  <img src="images/17.png" alt="九宫配数">
+  <div class="img-caption"><strong>图十七：九宫配数示例</strong></div>
+  <div class="page-num">42</div>
+  <div class="footer-mark">风水下罗经秘法</div>
+</section>
+
+<section class="slide img-slide">
+  <img src="images/18.png" alt="坐山吉凶排序">
+  <div class="img-caption"><strong>图十八：坐山吉凶排序示例</strong></div>
+  <div class="page-num">43</div>
+  <div class="footer-mark">风水下罗经秘法</div>
+</section>
+
+<section class="slide">
+  <span class="eyebrow">06 · 正针挨星消砂</span>
+  <h1>六亲断法</h1>
+  <ul>
+    <li>宅坟<span class="highlight">左</span>为1、4、7房</li>
+    <li>宅坟<span class="highlight">明堂</span>为2、5、8房</li>
+    <li>宅坟<span class="highlight">右</span>为3、6、9房</li>
+  </ul>
+  <div class="page-num">44</div>
+  <div class="footer-mark">风水下罗经秘法</div>
+</section>
+
+<!-- ═════ 第七讲 ═════ -->
+<section class="slide">
+  <span class="eyebrow">07 · 人盘赖公消砂法</span>
+  <h1>人盘二十四山五行</h1>
+  <table class="t2x2">
+    <tr><td>甲庚壬丙 · 子午卯酉</td><td><span class="highlight">火</span></td></tr>
+    <tr><td>寅申巳亥</td><td><span class="highlight">水</span></td></tr>
+    <tr><td>辰戌丑未</td><td><span class="highlight">金</span></td></tr>
+    <tr><td>乾艮巽坤</td><td><span class="highlight">木</span></td></tr>
+    <tr><td>乙辛丁癸</td><td><span class="highlight">土</span></td></tr>
+  </table>
+  <div class="page-num">45</div>
+  <div class="footer-mark">风水下罗经秘法</div>
+</section>
+
+<section class="slide">
+  <span class="eyebrow">07 · 人盘赖公消砂法</span>
+  <h1>生克吉凶</h1>
+  <ul>
+    <li><span class="highlight">克我</span>（煞）→ 有祸殃，血光之灾</li>
+    <li><span class="highlight">我生</span>（泄气）→ 生病财不旺</li>
+    <li><span class="highlight">我克</span>（奴）→ 财运好，事业旺</li>
+    <li><span class="highlight">比和</span>→ 万事昌，人财两旺</li>
+    <li><span class="highlight">生我</span>（印）→ 贵人帮，人财两旺</li>
+  </ul>
+  <div class="page-num">46</div>
+  <div class="footer-mark">风水下罗经秘法</div>
+</section>
+
+<section class="slide img-slide">
+  <img src="images/19.jpeg" alt="二十四山六亲分属">
+  <div class="img-caption"><strong>图十九：二十四山六亲分属</strong></div>
+  <div class="page-num">47</div>
+  <div class="footer-mark">风水下罗经秘法</div>
+</section>
+
+<!-- ═════ 第八讲 ═════ -->
+<section class="slide">
+  <span class="eyebrow">08 · 黄石公翻卦掌法</span>
+  <h1>二十四山纳甲</h1>
+  <p class="small">乾纳甲，坤纳乙，艮纳丙，巽纳辛</p>
+  <p class="small">坎纳子癸申辰，震纳卯未庚亥</p>
+  <p class="small">兑纳丁酉巳丑，离纳壬午寅戌</p>
+  <h2>八卦阴阳</h2>
+  <p class="small">阳：乾·坤·离·坎 &nbsp;|&nbsp; 阴：震·巽·艮·兑</p>
+  <div class="page-num">48</div>
+  <div class="footer-mark">风水下罗经秘法</div>
+</section>
+
+<section class="slide">
+  <span class="eyebrow">08 · 黄石公翻卦掌法</span>
+  <h1>阴向翻卦</h1>
+  <p class="small">看以向，去看起左辅，从兑翻到乾</p>
+  <div class="page-num">49</div>
+  <div class="footer-mark">风水下罗经秘法</div>
+</section>
+
+<section class="slide img-slide">
+  <img class="rotate-90" src="images/20.jpeg" alt="阴向翻卦图">
+  <div class="img-caption"><strong>图二十：阴向翻卦图</strong></div>
+  <div class="page-num">50</div>
+  <div class="footer-mark">风水下罗经秘法</div>
+</section>
+
+<section class="slide">
+  <span class="eyebrow">08 · 黄石公翻卦掌法</span>
+  <h1>阳向翻卦</h1>
+  <p class="small">通行图，从离翻到震</p>
+  <div class="page-num">51</div>
+  <div class="footer-mark">风水下罗经秘法</div>
+</section>
+
+<section class="slide img-slide">
+  <img class="rotate-90" src="images/21.jpeg" alt="阳向翻卦图">
+  <div class="img-caption"><strong>图二十一：阳向翻卦图</strong></div>
+  <div class="page-num">52</div>
+  <div class="footer-mark">风水下罗经秘法</div>
+</section>
+
+<section class="slide">
+  <span class="eyebrow">08 · 黄石公翻卦掌法</span>
+  <h1>九星顺序</h1>
+  <div class="verse">1左辅 · 2武曲 · 3破军 · 4廉贞<br>5贪狼 · 6巨门 · 7禄存 · 8文曲</div>
+  <p class="small"><span class="highlight">吉星：</span>左辅 · 武曲 · 贪狼 · 巨门</p>
+  <p class="small"><span class="highlight">凶星：</span>破军 · 廉贞 · 禄存 · 文曲</p>
+  <div class="page-num">53</div>
+  <div class="footer-mark">风水下罗经秘法</div>
+</section>
+
+<section class="slide">
+  <span class="eyebrow">08 · 黄石公翻卦掌法</span>
+  <h1>举例：坐壬向丙</h1>
+  <p class="small">丙向纳艮为阴向 → 从兑翻到乾</p>
+  <p class="small">丙来水有砂为吉，丁丑巳酉来水砂为吉</p>
+  <p class="small">辛来水有砂为吉，卯未庚亥来水砂为吉</p>
+  <div class="page-num">54</div>
+  <div class="footer-mark">风水下罗经秘法</div>
+</section>
+
+<section class="slide img-slide">
+  <img class="rotate-90" src="images/22.jpeg" alt="坐壬向丙翻卦">
+  <div class="img-caption"><strong>图二十二：坐壬向丙翻卦示例</strong></div>
+  <div class="page-num">55</div>
+  <div class="footer-mark">风水下罗经秘法</div>
+</section>
+
+<section class="slide">
+  <span class="eyebrow">08 · 黄石公翻卦掌法</span>
+  <h1>判断方法 · 天盘来水去水</h1>
+  <div class="c2">
+    <div>
+      <h3>来水</h3>
+      <p class="small">吉星方纳二十四山有来水为吉</p>
+    </div>
+    <div>
+      <h3>去水</h3>
+      <p class="small">凶星方纳二十四山有去水为吉</p>
+    </div>
+  </div>
+  <p class="small">操作：红线指向最近水处为来水，流到不见处为去水</p>
+  <div class="page-num">56</div>
+  <div class="footer-mark">风水下罗经秘法</div>
+</section>
+
+<section class="slide img-slide">
+  <img src="images/23.jpeg" alt="天盘测量来水去水">
+  <div class="img-caption"><strong>图二十三：天盘测量来水去水</strong></div>
+  <div class="page-num">57</div>
+  <div class="footer-mark">风水下罗经秘法</div>
+</section>
+
+<!-- ═════ 第九讲 ═════ -->
+<section class="slide">
+  <span class="eyebrow">09 · 七十二格龙用法</span>
+  <h1>操作与吉凶判断</h1>
+  <h3>操作方法</h3>
+  <p class="small">站在穴星处，红线指向后山，所压即为来龙</p>
+  <h3>吉凶定论</h3>
+  <ul>
+    <li>龙纳音 = 地支五行 → <span class="highlight">旺龙</span></li>
+    <li>龙生地支 → 次旺龙</li>
+    <li>地支生龙 → 休龙</li>
+    <li>龙克地支 → <span class="highlight">囚龙</span></li>
+    <li>地支克龙 → <span class="highlight">死龙</span></li>
+  </ul>
+  <div class="page-num">58</div>
+  <div class="footer-mark">风水下罗经秘法</div>
+</section>
+
+<!-- ═════ 第十讲 ═════ -->
+<section class="slide">
+  <span class="eyebrow">10 · 地盘分金用法</span>
+  <h1>一百二十分金</h1>
+  <ul>
+    <li>用于立坟安坟</li>
+    <li>每一山分成五份</li>
+    <li>分金纳音须与命主相同</li>
+    <li>或者命克分金、分金生命方可</li>
+    <li>空亡处为龟甲，不可选择</li>
+  </ul>
+  <div class="page-num">59</div>
+  <div class="footer-mark">风水下罗经秘法</div>
+</section>
+
+<!-- ═════ 第十一讲 ═════ -->
+<section class="slide">
+  <span class="eyebrow">11 · 阳宅布局方法</span>
+  <h1>玄空九星 + 过路阴阳</h1>
+  <div class="c2">
+    <div>
+      <h3>过路阴阳法</h3>
+      <p class="small">一、二、三、四宫要砂</p>
+      <p class="small">例：东北艮放神位→艮要水不要砂→小孩不好</p>
+    </div>
+    <div>
+      <h3>玄空九星法</h3>
+      <p class="small">吉星：9、8为财</p>
+      <p class="small">凶星：5、2为病</p>
+      <p class="small">1+4 = 文昌位</p>
+    </div>
+  </div>
+  <div class="co">两种方法配合最为神奇准确</div>
+  <div class="page-num">60</div>
+  <div class="footer-mark">风水下罗经秘法</div>
+</section>
+
+<!-- ═════ 第十二讲 ═════ -->
+<section class="slide img-slide">
+  <img src="images/24.jpeg" alt="坟地墓碑破坏">
+  <div class="img-caption"><strong>图二十四：坟地墓碑破坏部位</strong></div>
+  <div class="page-num">61</div>
+  <div class="footer-mark">风水下罗经秘法</div>
+</section>
+
+<section class="slide">
+  <span class="eyebrow">12 · 坟地墓碑有破坏</span>
+  <h1>断法</h1>
+  <ul>
+    <li><span class="highlight">上部</span>有损 → 头部有病（1、4、7房）</li>
+    <li><span class="highlight">中部</span>有损 → 腹部有病（2、5、8房）</li>
+    <li><span class="highlight">下部</span>有损 → 脚部有病（3、6、9房）</li>
+  </ul>
+  <div class="page-num">62</div>
+  <div class="footer-mark">风水下罗经秘法</div>
+</section>
+
+<!-- ═════ 第十三讲 ═════ -->
+<section class="slide">
+  <span class="eyebrow">13 · 找坟地及阳宅方法</span>
+  <h1>寻龙点穴</h1>
+  <ul>
+    <li>早晨太阳未出前或傍晚日落后</li>
+    <li>地面起雾气者 → 龙脉地</li>
+    <li>按过路阴阳砂水环境找</li>
+  </ul>
+  <div class="page-num">63</div>
+  <div class="footer-mark">风水下罗经秘法</div>
+</section>
+
+<!-- ═════ 第十四讲 ═════ -->
+<section class="slide">
+  <span class="eyebrow">14 · 立向的方法</span>
+  <h1>操作步骤</h1>
+  <ol>
+    <li>推测出立什么向</li>
+    <li>站在空地、穴地要建造的中心</li>
+    <li>转动罗盘，红线压在所立的向上</li>
+    <li>移动罗盘，使南北标志与指针重合</li>
+    <li>将红线延长即可建造中心</li>
+  </ol>
+  <div class="page-num">64</div>
+  <div class="footer-mark">风水下罗经秘法</div>
+</section>
+
+<!-- ═════ 尾页 ═════ -->
+<section class="slide cover">
+  <h1>福生无量</h1>
+  <div class="divider"></div>
+  <div class="sub">风水下罗经秘法 · 全十四讲终</div>
+  <div class="page-num">—</div>
+  <div class="footer-mark">风水下罗经秘法</div>
+</section>
+
+</body>
+</html>

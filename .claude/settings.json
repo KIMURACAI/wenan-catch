@@ -1,0 +1,18 @@
+{
+  "skills": [
+    {
+      "name": "kami",
+      "type": "local",
+      "path": ".claude/skills/kami"
+    }
+  ],
+  "mcpServers": {
+    "douyin-mcp": {
+      "command": "uvx",
+      "args": ["douyin-mcp-server"],
+      "env": {
+        "UV_INDEX_URL": "https://pypi.tuna.tsinghua.edu.cn/simple"
+      }
+    }
+  }
+}

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>奇门遁甲象意系统</title>
+<meta name="description" content="奇门遁甲象意系统全解——八卦九宫、十天干、十二地支、九星、八门、八神、六壬十二神将的像意与占卜应用。">
+<meta name="keywords" content="奇门遁甲, 象意, 八卦九宫, 天干, 地支, 九星, 八门, 八神, 六壬">
+<meta name="generator" content="Kami">
+<style>
+  @font-face { font-family: "TsangerJinKai02"; src: url("https://cdn.jsdelivr.net/gh/tw93/Kami@main/assets/fonts/TsangerJinKai02-W04.ttf") format("truetype"); font-weight: 400; }
+  @font-face { font-family: "TsangerJinKai02"; src: url("https://cdn.jsdelivr.net/gh/tw93/Kami@main/assets/fonts/TsangerJinKai02-W05.ttf") format("truetype"); font-weight: 500; }
+  @page { size: A4; margin: 14mm 18mm 18mm 18mm; background: #f5f4ed;
+    @top-right { content: string(section-title); font-family: "TsangerJinKai02","Source Han Serif SC","Noto Serif CJK SC","Songti SC",Georgia,serif; font-size: 7.5pt; color: #6b6a64; }
+    @bottom-center { content: counter(page); font-family: "TsangerJinKai02","Source Han Serif SC","Noto Serif CJK SC","Songti SC",Georgia,serif; font-size: 8pt; color: #6b6a64; } }
+  @page:first { @top-right { content: ""; } @bottom-center { content: ""; } }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  :root { --parchment: #f5f4ed; --ivory: #faf9f5; --near-black:#141413; --dark-warm: #3d3d3a; --olive: #504e49; --stone: #6b6a64; --brand: #1B365D; --border: #e8e6dc; --border-soft:#e5e3d8; --tag-bg: #E4ECF5; --serif: "TsangerJinKai02","Source Han Serif SC","Noto Serif CJK SC","Songti SC","STSong",Georgia,serif; --sans: var(--serif); }
+  html, body { background: var(--parchment); }
+  @media screen { body { max-width: 210mm; margin: 0 auto; padding: 14mm 18mm 18mm 18mm; } }
+  body { color: var(--near-black); font-family: var(--serif); font-size: 10pt; line-height: 1.5; letter-spacing: 0.2pt; widows: 2; orphans: 2; }
+
+  .cover { min-height: 180mm; display: flex; flex-direction: column; justify-content: space-between; padding: 30mm 0 0 0; break-after: page; }
+  .cover-eyebrow { display: inline-flex; align-items: center; gap: 6pt; font-family: var(--sans); font-size: 9pt; color: var(--brand); letter-spacing: 1pt; text-transform: uppercase; font-weight: 500; margin-bottom: 14pt; }
+  .cover-eyebrow::before { content: ""; width: 8pt; height: 1.5pt; border-radius: 0.75pt; background: var(--brand); flex-shrink: 0; }
+  .cover-title { font-size: 30pt; font-weight: 500; color: var(--near-black); line-height: 1.15; letter-spacing: 0.2pt; margin-bottom: 12pt; }
+  .cover-sub { font-family: var(--sans); font-size: 12pt; color: var(--olive); line-height: 1.4; max-width: 85%; margin-bottom: 24pt; }
+  .cover-meta { font-family: var(--sans); font-size: 9pt; color: var(--stone); line-height: 1.4; }
+  .cover-meta strong { color: var(--dark-warm); font-weight: 500; }
+
+  .toc { break-after: page; }
+  .toc h2 { font-size: 18pt; font-weight: 500; margin-bottom: 10pt; border-left: 2.5pt solid var(--brand); border-radius: 1.5pt; padding-left: 8pt; }
+  .toc-item { display: flex; align-items: baseline; padding: 3.5pt 0; border-bottom: 0.3pt dotted var(--border); font-size: 10pt; }
+  .toc-item:last-of-type { border-bottom: none; }
+  .toc-num { color: var(--brand); font-weight: 500; min-width: 24pt; font-size: 9pt; }
+  .toc-title { flex: 1; color: var(--near-black); padding-left: 4pt; }
+
+  h1 { font-size: 18pt; font-weight: 500; line-height: 1.2; margin: 0 0 6pt 0; border-left: 2.5pt solid var(--brand); border-radius: 1.5pt; padding-left: 8pt; color: var(--near-black); break-after: avoid; string-set: section-title content(); }
+  h2 { font-size: 14pt; font-weight: 500; line-height: 1.25; margin: 16pt 0 5pt 0; color: var(--near-black); break-after: avoid; }
+  h3 { font-size: 12pt; font-weight: 500; line-height: 1.3; margin: 10pt 0 4pt 0; color: var(--brand); break-after: avoid; }
+  .chapter-num { font-family: var(--sans); font-size: 8.5pt; color: var(--brand); letter-spacing: 0.8pt; text-transform: uppercase; margin-bottom: 4pt; }
+
+  p { margin: 0 0 6pt 0; line-height: 1.5; color: var(--near-black); widows: 2; orphans: 2; }
+  .lead { font-size: 11pt; line-height: 1.5; color: var(--dark-warm); margin-bottom: 10pt; }
+  .hl { color: var(--brand); font-weight: 500; }
+  strong { font-weight: 500; }
+
+  table { width: 100%; border-collapse: collapse; font-size: 9pt; margin: 8pt 0; break-inside: avoid; }
+  table th { text-align: left; font-weight: 500; color: var(--var(--ivory)); padding: 4pt 6pt; border-bottom: 1pt solid var(--border); background: var(--brand); color: var(--ivory); }
+  table td { padding: 3pt 6pt; border-bottom: 0.3pt solid var(--border-soft); vertical-align: top; }
+
+  .callout { background: var(--ivory); border-left: 2pt solid var(--brand); padding: 7pt 12pt; border-radius: 3pt; margin: 8pt 0; line-height: 1.5; break-inside: avoid; font-size: 9.5pt; }
+
+  .chapter { break-before: page; }
+  .colophon { margin-top: 20pt; padding-top: 8pt; border-top: 0.5pt solid var(--border); font-size: 9pt; color: var(--stone); line-height: 1.4; }
+
+  .symbol-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8pt; margin: 6pt 0; }
+  .sym-item { background: var(--ivory); border-left: 2pt solid var(--brand); border-radius: 3pt; padding: 5pt 10pt; break-inside: avoid; }
+  .sym-name { font-weight: 500; color: var(--brand); font-size: 10pt; margin-bottom: 1pt; }
+  .sym-body { font-size: 9.5pt; color: var(--near-black); line-height: 1.45; }
+
+  .sym-item-wide { background: var(--ivory); border-left: 2pt solid var(--brand); border-radius: 3pt; padding: 5pt 10pt; margin-bottom: 5pt; break-inside: avoid; }
+  .sym-item-wide .sym-name { font-weight: 500; color: var(--brand); font-size: 10pt; }
+  .sym-item-wide .sym-body { font-size: 9.5pt; color: var(--near-black); line-height: 1.45; }
+
+  .tag { display: inline-block; background: var(--tag-bg); color: var(--brand); font-size: 8pt; font-weight: 500; padding: 1pt 5pt; border-radius: 2pt; margin-right: 3pt; }
+</style>
+</head>
+<body>
+
+<section class="cover">
+  <div>
+    <div class="cover-eyebrow">奇门遁甲 · 第八讲</div>
+    <div class="cover-title">象意系统</div>
+    <div class="cover-sub">八卦九宫 · 十天干 · 十二地支 · 九星<br>八门 · 八神 · 六壬十二神将</div>
+  </div>
+  <div class="cover-meta">
+    <strong>奇门遁甲系列</strong><br>
+    版本 V1.0  ·  2026 年 7 月
+  </div>
+</section>
+
+<section class="toc">
+  <h2>目录</h2>
+  <div class="toc-item"><span class="toc-num">01</span><span class="toc-title">八卦九宫的像意</span></div>
+  <div class="toc-item"><span class="toc-num">02</span><span class="toc-title">十天干的像意</span></div>
+  <div class="toc-item"><span class="toc-num">03</span><span class="toc-title">十二地支的像意</span></div>
+  <div class="toc-item"><span class="toc-num">04</span><span class="toc-title">九星的像意</span></div>
+  <div class="toc-item"><span class="toc-num">05</span><span class="toc-title">八门的像意</span></div>
+  <div class="toc-item"><span class="toc-num">06</span><span class="toc-title">八神的像意</span></div>
+  <div class="toc-item"><span class="toc-num">07</span><span class="toc-title">六壬十二神将的像意</span></div>
+</section>
+
+<!-- ===== 01 · 八卦九宫 ===== -->
+<section class="chapter" id="ch1">
+  <div class="chapter-num">01 · Bagua &amp; Nine Palaces</div>
+  <h1>八卦九宫的像意</h1>
+  <p class="lead">八卦九宫在预测中代表一个人的根基，属于地利系统，是奇门预测的基础层面。</p>
+  <p>八卦九宫是空间属性，落在哪个宫位就对人和事有影响和制约作用，相当于一个人的根基，是所有符号的基础。</p>
+
+  <div class="symbol-grid">
+    <div class="sym-item"><div class="sym-name"><span class="tag">乾</span> 天</div><div class="sym-body">代表大事、心高气傲、眼光高。场所：首都、大城市、繁华高级场所。人物：领导、高贵者。</div></div>
+    <div class="sym-item"><div class="sym-name"><span class="tag">坎</span> 水</div><div class="sym-body">波折、变化、陷阱、忧患。多不吉利。人物：闲散人员、黑社会、阴险者、盗贼。性质：见不得光、淫乱。</div></div>
+    <div class="sym-item"><div class="sym-name"><span class="tag">艮</span> 山</div><div class="sym-body">忠厚老实、呆板迟钝、慢性子。代表停止、阻力、等待。</div></div>
+    <div class="sym-item"><div class="sym-name"><span class="tag">震</span> 雷</div><div class="sym-body">动态、突发性、意想不到之事。起落大。人物：军警系统、暴乱者。</div></div>
+    <div class="sym-item"><div class="sym-name"><span class="tag">巽</span> 风</div><div class="sym-body">飘摇不定、没主见、左右摇摆、欺骗、不稳定。人物：仙道、宗教修行者。</div></div>
+    <div class="sym-item"><div class="sym-name"><span class="tag">离</span> 火</div><div class="sym-body">名气、虚伪、漂亮、不持久、着急、乱子、有始无终。</div></div>
+    <div class="sym-item"><div class="sym-name"><span class="tag">坤</span> 地</div><div class="sym-body">杂乱无章、问题多、大众化、慢性、散乱。场所：乡村、田野。人物：农民、老妇人、厚道者、神佛菩萨。</div></div>
+    <div class="sym-item"><div class="sym-name"><span class="tag">兑</span> 泽</div><div class="sym-body">胆战心惊、口舌是非、缺陷、冷战、冷酷、肃杀之气。人物：少女、巫师、靠口才赚钱者。</div></div>
+  </div>
+</section>
+
+<!-- ===== 02 · 十天干 ===== -->
+<section class="chapter" id="ch2">
+  <div class="chapter-num">02 · Ten Heavenly Stems</div>
+  <h1>十天干的像意</h1>
+  <p class="lead">十天干的像意在奇门遁甲预测中所占比重非常重要，是核心符号系统。</p>
+
+  <div class="sym-item-wide"><div class="sym-name">甲 · 值符</div><div class="sym-body">贵重、重要人物或大事。代表领导、官员、贵人。最怕落空亡——值符逢空，年命不保。</div></div>
+  <div class="sym-item-wide"><div class="sym-name">乙 · 日奇</div><div class="sym-body">事情曲折中成功。天：月亮。人：妻子、医生。地：花草、中药、龙蛇。人体：肝胆、头发、神经、关节。性格：柔弱、艺术。</div></div>
+  <div class="sym-item-wide"><div class="sym-name">丙 · 月奇</div><div class="sym-body">太阳、麻烦、乱子、权威。人：男人、情夫。病：发热、炎症。性格：急躁。物：红色、圆形、镜子。人体：肠、额头、嘴唇、眼、血液。</div></div>
+  <div class="sym-item-wide"><div class="sym-name">丁 · 星奇</div><div class="sym-body">少女、情妇、小姐、美女。奇迹、希望。人体：眼睛、心脏、牙齿。物：手术刀、钉子、刺状物、男性生殖器、叮人的动物。</div></div>
+  <div class="sym-item-wide"><div class="sym-name">戊 · 阳土</div><div class="sym-body">高岗、山坡。钱财、工资、田地房屋、资本。性格：迟缓、呆板。人体：鼻子、乳房、胸肋。动物：猪、大象、肉多者。</div></div>
+  <div class="sym-item-wide"><div class="sym-name">己 · 阴土</div><div class="sym-body">自私、私欲、阴险、低陷、陷阱。坟墓、阳台。幻想、欲望、丑陋。人体：窍、脾胃。阻力、策划、创意、拐弯。</div></div>
+  <div class="sym-item-wide"><div class="sym-name">庚 · 阳金</div><div class="sym-body">警察、仇人、难以解决的矛盾困难、难以突破的阻力。病：肿块、癌症。人：丈夫、黑社会、凶恶者。动物：老虎、狮子。人体：骨头、大肠。</div></div>
+  <div class="sym-item-wide"><div class="sym-name">辛 · 阴金</div><div class="sym-body">罪人、过错、问题、革命、变革。物：金银珠宝、小颗粒、粮食。人体：小骨头、牙齿、肺、皮毛、粉刺。代表小的阻力。</div></div>
+  <div class="sym-item-wide"><div class="sym-name">壬 · 阳水</div><div class="sym-body">主变化。江河之水、转折。人体：血液、膀胱、心脏、腿。流动的、自来水。</div></div>
+  <div class="sym-item-wide"><div class="sym-name">癸 · 阴水</div><div class="sym-body">微小变化。性生活、女性生殖器官。阴水、下水道、脏水。天网、网络。人体：足、鞋、静脉、泌尿生殖系统、肾、尿液、精液。</div></div>
+</section>
+
+<!-- ===== 03 · 十二地支 ===== -->
+<section class="chapter" id="ch3">
+  <div class="chapter-num">03 · Twelve Earthly Branches</div>
+  <h1>十二地支的像意</h1>
+
+  <div class="symbol-grid">
+    <div class="sym-item"><div class="sym-name"><span class="tag">子</span> 水</div><div class="sym-body">首领、智慧、阴私、奸邪、暗昧、色欲、桃花。人体：泌尿生殖系统。自然：雨水、黑色。</div></div>
+    <div class="sym-item"><div class="sym-name"><span class="tag">丑</span> 土</div><div class="sym-body">忠厚、正直、善良、丑陋。田产、脾胃。动物：牛马。</div></div>
+    <div class="sym-item"><div class="sym-name"><span class="tag">寅</span> 木</div><div class="sym-body">文化、艺术、教育、仁慈、易怒。人物：政府办事人员。动物：老虎。场所：树林。</div></div>
+    <div class="sym-item"><div class="sym-name"><span class="tag">卯</span> 木</div><div class="sym-body">艺术、文化、欢乐。人体：十指、毛发、肝。</div></div>
+    <div class="sym-item"><div class="sym-name"><span class="tag">辰</span> 土</div><div class="sym-body">争斗、牢狱、困难、官司、凶怪、惊恐、邪恶、多淫。</div></div>
+    <div class="sym-item"><div class="sym-name"><span class="tag">巳</span> 火</div><div class="sym-body">怪异、狡诈、虚伪、谩骂、犯法。人体：血液、心脏。</div></div>
+    <div class="sym-item"><div class="sym-name"><span class="tag">午</span> 火</div><div class="sym-body">口舌是非、火光、文书、诅咒、词颂。人体：心、目。</div></div>
+    <div class="sym-item"><div class="sym-name"><span class="tag">未</span> 土</div><div class="sym-body">味道、酒食、婚姻、喜庆、拜神。人体：胃。农业：农作物。</div></div>
+    <div class="sym-item"><div class="sym-name"><span class="tag">申</span> 金</div><div class="sym-body">传递、阻隔、困难、急躁、严肃。</div></div>
+    <div class="sym-item"><div class="sym-name"><span class="tag">酉</span> 金</div><div class="sym-body">策划、密谋、金融、经济、市场、交易、买卖。性格：文静、细腻。</div></div>
+    <div class="sym-item"><div class="sym-name"><span class="tag">戌</span> 土</div><div class="sym-body">虚伪、空虚、伪装、虚幻、茫然。宗教、慈祥、宽厚。</div></div>
+    <div class="sym-item"><div class="sym-name"><span class="tag">亥</span> 水</div><div class="sym-body">流动、阴私、肮脏、偷盗、眩晕、沉溺。</div></div>
+  </div>
+</section>
+
+<!-- ===== 04 · 九星 ===== -->
+<section class="chapter" id="ch4">
+  <div class="chapter-num">04 · Nine Stars · 天时系统</div>
+  <h1>九星的像意</h1>
+  <p class="lead">九星代表人或事物的先天属性，属于天时系统。</p>
+
+  <div class="symbol-grid">
+    <div class="sym-item"><div class="sym-name">天蓬星</div><div class="sym-body">智慧、胆大好色。人体：头发蓬松、肩颈。物：房子、雨具、宽松衣服。人：黑社会、大盗。敢于冒险。</div></div>
+    <div class="sym-item"><div class="sym-name">天任星</div><div class="sym-body">忠厚老实、任劳任怨、弯腰驼背、胸大、勤奋肯干。性格：死板、保守、小气。物：山包、土包。</div></div>
+    <div class="sym-item"><div class="sym-name">天冲星</div><div class="sym-body">急性子、雷厉风行、动作快、冲动、鲁莽。人物：军人、部队、警察。</div></div>
+    <div class="sym-item"><div class="sym-name">天府星</div><div class="sym-body">文雅、有修养、有风度、辅助别人。人物：助理、教师、策划、导师、文化人。</div></div>
+    <div class="sym-item"><div class="sym-name">天英星</div><div class="sym-body">英雄、漂亮人物、文化、礼貌、文明。性格：脾气火爆。物：花卉、电子产品、红色。</div></div>
+    <div class="sym-item"><div class="sym-name">天芮星</div><div class="sym-body">病人、学生、有问题的人或事。疾病、交友、传道。人物：女神、菩萨。场所：医院、学校。物：书报。</div></div>
+    <div class="sym-item"><div class="sym-name">天柱星</div><div class="sym-body">顶天立地、独当一面、改天换地的能力。破坏力、革命、口舌是非。人体：颈椎、大腿。物：电线杆。</div></div>
+    <div class="sym-item"><div class="sym-name">天心星</div><div class="sym-body">精明、有领导能力、核心。场所：医院。物：医药、西医西药。神秘文化、仙佛。人体：心脏。</div></div>
+    <div class="sym-item"><div class="sym-name">天禽星</div><div class="sym-body">首领、皇帝、中正。</div></div>
+  </div>
+</section>
+
+<!-- ===== 05 · 八门 ===== -->
+<section class="chapter" id="ch5">
+  <div class="chapter-num">05 · Eight Doors · 人事系统</div>
+  <h1>八门的像意</h1>
+  <p class="lead">八门反映的是人事系统，代表事物的状态和人的心理活动。</p>
+
+  <div class="sym-item-wide"><div class="sym-name">休门</div><div class="sym-body">修养生息、调整、美容美发、下班、运输。休息过度等于死亡。修理、懒散、清闲、旅游、拜见贵人。一般办不成大事，适合公务人员。也代表娱乐场所、淫乱、桃花。</div></div>
+  <div class="sym-item-wide"><div class="sym-name">生门 <span class="tag">艮卦</span></div><div class="sym-body">生长、增长、延伸。利润、效益、生孩子。测外伤逢生门好得快。测结石肿瘤逢生门反而凶——因为结石在生长。</div></div>
+  <div class="sym-item-wide"><div class="sym-name">伤门</div><div class="sym-body">损害、伤害、伤心、伤痛。捕捉、赌博、讨债、挑逗。人物：司机、公安。吉时伤别人，凶时伤自己。车船、打猎。</div></div>
+  <div class="sym-item-wide"><div class="sym-name">杜门</div><div class="sym-body">技术、堵塞、封闭、不善言谈、关口。人物：蒙面人、神佛、仙道、修炼者、气功师。头发浓密。反映事物状态与性质。</div></div>
+  <div class="sym-item-wide"><div class="sym-name">景门</div><div class="sym-body">漂亮、虚伪、华而不实、欺骗。场所：娱乐、歌厅、酒吧、网吧。广告。</div></div>
+  <div class="sym-item-wide"><div class="sym-name">死门</div><div class="sym-body">死板、固执、鬼神、尸体、坟墓、地皮、寺庙、雕像。</div></div>
+  <div class="sym-item-wide"><div class="sym-name">惊门</div><div class="sym-body">口舌是非、惊恐、官司。口才好、靠口才赚钱。人物：教师、律师、巫师、歌星。</div></div>
+  <div class="sym-item-wide"><div class="sym-name">开门</div><div class="sym-body">开始、开创、开放、开心、打开、舒展。代表工作。</div></div>
+</section>
+
+<!-- ===== 06 · 八神 ===== -->
+<section class="chapter" id="ch6">
+  <div class="chapter-num">06 · Eight Deities · 神助系统</div>
+  <h1>八神的像意</h1>
+  <p class="lead">八神反映事物的规律，代表宇宙中的暗物质、能量场，在奇门遁甲中为神助信息。</p>
+
+  <div class="symbol-grid">
+    <div class="sym-item"><div class="sym-name">值符</div><div class="sym-body">高贵、权力、威望、名人。贵重、盔甲。主贵气，但不一定有能力。</div></div>
+    <div class="sym-item"><div class="sym-name">腾蛇</div><div class="sym-body">卷曲、难缠、虚惊、怪异。以柔克刚、变来变去、曲折、虚幻、不真实。狡诈阴险。</div></div>
+    <div class="sym-item"><div class="sym-name">太阴</div><div class="sym-body">细腻、精雕细刻、暗昧、阴沉、阴私。女性用品、冰美人、冰淇淋。淫乱、鬼。脸白、隐私、细心、见不得人的事。</div></div>
+    <div class="sym-item"><div class="sym-name">六合</div><div class="sym-body">合作、小孩、婚姻、结婚证。合伙人、中介。多的、非单一的。测疾病一般代表多种疾病。</div></div>
+    <div class="sym-item"><div class="sym-name">白虎</div><div class="sym-body">凶伤孝服、手术、血光、道路。警察、公检法。技术过硬。白、胖、煞气、灾祸。</div></div>
+    <div class="sym-item"><div class="sym-name">玄武</div><div class="sym-body">玄学、神秘、偷情、迷茫、不清晰。小偷、智慧。淫乱、暗昧不明、忽悠。</div></div>
+    <div class="sym-item"><div class="sym-name">九地</div><div class="sym-body">低处、阴暗潮湿低陷。个矮、稳重、慢性子。人物：老妇人、神佛。消极、慢性疾病。</div></div>
+    <div class="sym-item"><div class="sym-name">九天</div><div class="sym-body">积极、光明、高档、志向远大。个性张扬、急脾气。远行、动态的、往上升。</div></div>
+  </div>
+</section>
+
+<!-- ===== 07 · 六壬十二神将 ===== -->
+<section class="chapter" id="ch7">
+  <div class="chapter-num">07 · Twelve Renshen Generals</div>
+  <h1>六壬十二神将的像意</h1>
+
+  <div class="symbol-grid">
+    <div class="sym-item"><div class="sym-name">子 · 神后</div><div class="sym-body">贵辰、贵人、官员、钱财。淫妇、阴私、暗昧。阴神、水神、潜藏性。</div></div>
+    <div class="sym-item"><div class="sym-name">丑 · 大吉</div><div class="sym-body">天恶、暗疾、阻碍、破财、欢送。</div></div>
+    <div class="sym-item"><div class="sym-name">寅 · 功曹</div><div class="sym-body">权威、军队、公检法、欢乐祥和。</div></div>
+    <div class="sym-item"><div class="sym-name">卯 · 太冲</div><div class="sym-body">破水、破财、开支、大方。日月之门户、面子、冲动。车船。</div></div>
+    <div class="sym-item"><div class="sym-name">辰 · 天罡</div><div class="sym-body">奸私、自私、奸诈、阴谋、暗昧。坟、牢狱、死伤、打斗。人物：军人。</div></div>
+    <div class="sym-item"><div class="sym-name">巳 · 太乙</div><div class="sym-body">文曲星，聪明好学。文书、信仰、娱乐、变化。</div></div>
+    <div class="sym-item"><div class="sym-name">午 · 圣光</div><div class="sym-body">天伏星。官方、文约、书信。女人、酒席、光明、华丽。灯、书画。</div></div>
+    <div class="sym-item"><div class="sym-name">未 · 小吉</div><div class="sym-body">驿马星，主变动、出行。女人、离家。酒食、吉庆。</div></div>
+    <div class="sym-item"><div class="sym-name">申 · 传送</div><div class="sym-body">道路、忙碌、劳苦、孤单。服务行业。车、飞机。</div></div>
+    <div class="sym-item"><div class="sym-name">酉 · 从魁</div><div class="sym-body">生气、口舌官司、掌实权。隐私、酒、后门。金融。姓赵。</div></div>
+    <div class="sym-item"><div class="sym-name">戌 · 河魁</div><div class="sym-body">技巧、技术、艺术、心灵手巧。五金机械、欺诈、反复。</div></div>
+    <div class="sym-item"><div class="sym-name">亥 · 登明</div><div class="sym-body">长寿、拖拉、缓慢、困难。倔强、胆怯。茶具、有水的地方。</div></div>
+  </div>
+
+  <div class="colophon">奇门遁甲系列 · 第八讲 像意系统 · 本文档基于奇门教学资料整理。</div>
+</section>
+
+</body>
+</html>

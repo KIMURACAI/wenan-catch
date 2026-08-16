@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 520" width="100%" height="100%">
+    <defs>
+        <style>
+            .bg { fill: #faf9f5; }
+            .cell-bg { fill: #f5f4ed; stroke: #1B365D; stroke-width: 1.5; }
+            .cell-bg-center { fill: #e8e6dc; stroke: #1B365D; stroke-width: 1.5; }
+            .title { font-family: 'Georgia', 'SimSun', serif; font-size: 18px; fill: #1B365D; font-weight: bold; }
+            .subtitle { font-family: 'Georgia', 'SimSun', serif; font-size: 13px; fill: #5a5a55; }
+            .dir-label { font-family: 'Georgia', 'SimSun', serif; font-size: 11px; fill: #8a8a85; }
+            .palace-name { font-family: 'Georgia', 'SimSun', serif; font-size: 14px; fill: #1B365D; font-weight: bold; }
+            .shen { font-family: 'Georgia', 'SimSun', serif; font-size: 12px; fill: #8B0000; }  /* 八神-红色 */
+            .xing { font-family: 'Georgia', 'SimSun', serif; font-size: 11px; fill: #1B365D; }  /* 九星-蓝色 */
+            .men { font-family: 'Georgia', 'SimSun', serif; font-size: 11px; fill: #2D5A8A; }
+            .gan { font-family: 'Georgia', 'SimSun', serif; font-size: 16px; fill: #000000; font-weight: bold; }
+            .di-gan { font-family: 'Georgia', 'SimSun', serif; font-size: 11px; fill: #666660; }
+            .extra { font-family: 'Georgia', 'SimSun', serif; font-size: 10px; fill: #8a8a85; }
+            .legend { font-family: 'Georgia', 'SimSun', serif; font-size: 10px; fill: #5a5a55; }
+        </style>
+    </defs>
+    <rect class="bg" width="100%" height="100%" />
+    
+<text class="title" x="20" y="30">阳遁8局 戊午时</text>
+<text class="subtitle" x="20" y="50">2010年4月28日12:42·阴宅例</text>
+<rect class="cell-bg" x="20" y="80" width="140" height="140" rx="2" />
+<text class="dir-label" x="24" y="92">东南</text>
+<text class="palace-name" text-anchor="end" x="156" y="94">巽</text>
+<text class="shen" text-anchor="middle" x="90" y="108">太阴</text>
+<text class="gan" text-anchor="middle" x="90" y="145">辛</text>
+<text class="di-gan" text-anchor="end" x="154" y="214">癸</text>
+<text class="xing" x="26" y="130">天芮禽</text>
+<text class="men" text-anchor="end" x="154" y="130">死门</text>
+<rect class="cell-bg" x="160" y="80" width="140" height="140" rx="2" />
+<text class="dir-label" x="164" y="92">南</text>
+<text class="palace-name" text-anchor="end" x="296" y="94">离</text>
+<text class="shen" text-anchor="middle" x="230" y="108">六合</text>
+<text class="gan" text-anchor="middle" x="230" y="145">乙</text>
+<text class="di-gan" text-anchor="end" x="294" y="214">己</text>
+<text class="xing" x="166" y="130">天柱</text>
+<text class="men" text-anchor="end" x="294" y="130">惊门</text>
+<rect class="cell-bg" x="300" y="80" width="140" height="140" rx="2" />
+<text class="dir-label" x="304" y="92">西南</text>
+<text class="palace-name" text-anchor="end" x="436" y="94">坤</text>
+<text class="shen" text-anchor="middle" x="370" y="108">白虎</text>
+<text class="gan" text-anchor="middle" x="370" y="145">丙</text>
+<text class="di-gan" text-anchor="end" x="434" y="214">辛</text>
+<text class="xing" x="306" y="130">天心</text>
+<text class="men" text-anchor="end" x="434" y="130">开门</text>
+<rect class="cell-bg" x="20" y="220" width="140" height="140" rx="2" />
+<text class="dir-label" x="24" y="232">东</text>
+<text class="palace-name" text-anchor="end" x="156" y="234">震</text>
+<text class="shen" text-anchor="middle" x="90" y="248">螣蛇</text>
+<text class="gan" text-anchor="middle" x="90" y="285">己</text>
+<text class="di-gan" text-anchor="end" x="154" y="354">壬</text>
+<text class="xing" x="26" y="270">天英</text>
+<text class="men" text-anchor="end" x="154" y="270">景门</text>
+<rect class="cell-bg-center" x="160" y="220" width="140" height="140" rx="2" />
+<text class="dir-label" x="164" y="232">中</text>
+<text class="palace-name" text-anchor="end" x="296" y="234">中</text>
+<text class="shen" text-anchor="middle" x="230" y="248"></text>
+<text class="gan" text-anchor="middle" x="230" y="285">丁</text>
+<text class="di-gan" text-anchor="end" x="294" y="354">丁</text>
+<text class="xing" x="166" y="270">天禽</text>
+<text class="men" text-anchor="end" x="294" y="270"></text>
+<rect class="cell-bg" x="300" y="220" width="140" height="140" rx="2" />
+<text class="dir-label" x="304" y="232">西</text>
+<text class="palace-name" text-anchor="end" x="436" y="234">兑</text>
+<text class="shen" text-anchor="middle" x="370" y="248">玄武</text>
+<text class="gan" text-anchor="middle" x="370" y="285">庚</text>
+<text class="di-gan" text-anchor="end" x="434" y="354">乙</text>
+<text class="xing" x="306" y="270">天蓬</text>
+<text class="men" text-anchor="end" x="434" y="270">休门</text>
+<rect class="cell-bg" x="20" y="360" width="140" height="140" rx="2" />
+<text class="dir-label" x="24" y="372">东北</text>
+<text class="palace-name" text-anchor="end" x="156" y="374">艮</text>
+<text class="shen" text-anchor="middle" x="90" y="388">值符</text>
+<text class="gan" text-anchor="middle" x="90" y="425">癸</text>
+<text class="di-gan" text-anchor="end" x="154" y="494">戊</text>
+<text class="xing" x="26" y="410">天辅</text>
+<text class="men" text-anchor="end" x="154" y="410">杜门</text>
+<rect class="cell-bg" x="160" y="360" width="140" height="140" rx="2" />
+<text class="dir-label" x="164" y="372">北</text>
+<text class="palace-name" text-anchor="end" x="296" y="374">坎</text>
+<text class="shen" text-anchor="middle" x="230" y="388">九天</text>
+<text class="gan" text-anchor="middle" x="230" y="425">壬</text>
+<text class="di-gan" text-anchor="end" x="294" y="494">庚</text>
+<text class="xing" x="166" y="410">天冲</text>
+<text class="men" text-anchor="end" x="294" y="410">伤门</text>
+<rect class="cell-bg" x="300" y="360" width="140" height="140" rx="2" />
+<text class="dir-label" x="304" y="372">西北</text>
+<text class="palace-name" text-anchor="end" x="436" y="374">乾</text>
+<text class="shen" text-anchor="middle" x="370" y="388">九地</text>
+<text class="gan" text-anchor="middle" x="370" y="425">戊</text>
+<text class="di-gan" text-anchor="end" x="434" y="494">丙</text>
+<text class="xing" x="306" y="410">天任</text>
+<text class="men" text-anchor="end" x="434" y="410">生门</text>
+<rect x="20" y="530" width="10" height="10" fill="#8B0000" opacity="0.7" />
+<text class="legend" x="34" y="540">八神</text>
+<rect x="80" y="530" width="10" height="10" fill="#1B365D" opacity="0.7" />
+<text class="legend" x="94" y="540">九星</text>
+<rect x="140" y="530" width="10" height="10" fill="#2D5A8A" opacity="0.7" />
+<text class="legend" x="154" y="540">八门</text>
+<rect x="200" y="530" width="10" height="10" fill="#000000" opacity="0.7" />
+<text class="legend" x="214" y="540">天盘干</text>
+<rect x="260" y="530" width="10" height="10" fill="#666660" opacity="0.7" />
+<text class="legend" x="274" y="540">地盘干</text>
+</svg>

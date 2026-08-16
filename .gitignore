@@ -1,0 +1,60 @@
+# Environment
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+*.egg
+.venv/
+venv/
+
+# Data
+data/
+logs/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Audio / Video temp files
+*.mp4
+*.mp3
+*.wav
+temp/
+
+# ===== 以下为 2026-08-06 接手整理时补充 =====
+
+# 运行时缓存（视频/音频缓存，几十 MB 级）
+cache/
+
+# 大体积产物（PPTX/PDF 均为 40MB 级成品与备份，不纳入版本控制）
+*.pptx
+*.pdf
+
+# 图片资产（漫画配图/手裁图，体积大且另有原件）
+*.png
+*.jpg
+*.jpeg
+*.webp
+
+# 数据库与凭据
+*.db
+*.sqlite
+
+# 压缩包
+*.zip
+*.tar.gz
+
+# 扫描产物
+docs/codebase/.codebase-scan.txt
+
+# 大体积中间 JSON（base64 图片映射等）
+base64_map.json
+seg_input.json

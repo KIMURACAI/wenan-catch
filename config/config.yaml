@@ -1,0 +1,77 @@
+# 抖音文案采集系统 — 非敏感配置
+# 敏感信息（密钥、Token）请放在 .env 文件中
+
+project:
+  name: "wenan-catch"
+  data_dir: "data"
+  log_dir: "logs"
+
+douyin:
+  base_url: "https://www.douyin.com"
+  # 用户主页URL模板 (sec_uid 从抖音用户主页URL获取)
+  user_url_template: "https://www.douyin.com/user/{sec_uid}"
+  # 话题页URL模板
+  hashtag_url_template: "https://www.douyin.com/hashtag/{hashtag_id}"
+
+  # 浏览行为
+  scroll_pause_seconds: 2.0
+  min_scroll_pixels: 300
+  max_scroll_pixels: 700
+  min_action_delay: 0.3
+  max_action_delay: 0.8
+  max_scroll_attempts: 15
+  page_load_timeout_seconds: 30
+
+  # 采集限制
+  max_videos_per_target: 10
+  min_videos_per_target: 1
+  # 每个目标每天最多新增文案数
+  max_new_per_target: 3
+
+  # Cookie 持久化路径
+  cookie_path: "data/cookies/douyin_cookies.json"
+
+stealth:
+  viewport_width: 1920
+  viewport_height: 1080
+  user_agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+  locale: "zh-CN"
+  timezone: "Asia/Shanghai"
+
+storage:
+  database_path: "data/wenan_catch.db"
+  # 去重窗口：多少天内的视频才考虑去重
+  dedup_window_days: 30
+
+transcriber:
+  # 语音转文字引擎: whisper / volcengine
+  # - whisper: 本地离线，配置简单，CPU 用 tiny 即可
+  # - volcengine: 火山引擎（豆包同款），需在 .env 配 API Key
+  engine: "volcengine"
+
+  # Whisper 设置（engine: whisper 时生效）
+  model_size: "tiny"
+  language: "zh"
+  # 临时视频存放目录
+  temp_dir: "data/temp_videos"
+  # 是否在转录后自动删除临时文件
+  cleanup_temp_files: true
+
+# 缓存目录
+cache:
+  video_dir: "cache/videos"
+  audio_dir: "cache/audios"
+
+# Content Engine 内容生产引擎
+content_engine:
+  enabled: true                     # 是否启用 Content Engine
+  quality_threshold: 85             # 质量评分阈值（低于此值自动重写）
+  max_regenerate_attempts: 2        # 最大重写次数
+  sample_save_threshold: 85         # 高于此分保存到风格学习库
+
+feishu:
+  api_base: "https://open.feishu.cn/open-apis"
+  # 日报文档标题模板
+  daily_doc_title_template: "抖音文案日报 - {date}"
+  # API 限流
+  requests_per_second: 5

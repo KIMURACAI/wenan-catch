@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<!-- ==================================================================
+     LONG DOCUMENT · 道教规矩
+     暖 parchment 底色，墨蓝强调，衬线排版
+     ================================================================== -->
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>道教规矩</title>
+<meta name="author" content="Kami">
+<meta name="description" content="道教戒律、斋醮仪式、日常修行与服饰礼仪概览。规范道士行为举止，遵循道家基本教义与传统规范。">
+<meta name="keywords" content="道教, 戒律, 斋醮, 修行, 服饰礼仪, 五戒, 八戒, 十戒">
+<meta name="generator" content="Kami">
+<style>
+  @font-face {
+    font-family: "TsangerJinKai02";
+    src: url("https://cdn.jsdelivr.net/gh/tw93/Kami@main/assets/fonts/TsangerJinKai02-W04.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "TsangerJinKai02";
+    src: url("https://cdn.jsdelivr.net/gh/tw93/Kami@main/assets/fonts/TsangerJinKai02-W05.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+  }
+
+  @page {
+    size: A4;
+    margin: 20mm 22mm 22mm 22mm;
+    background: #f5f4ed;
+    @top-right {
+      content: string(section-title);
+      font-family: "TsangerJinKai02", "Source Han Serif SC", "Noto Serif CJK SC", "Songti SC", Georgia, serif;
+      font-size: 8pt;
+      color: #6b6a64;
+    }
+    @bottom-center {
+      content: counter(page) "  ·  道教规矩";
+      font-family: "TsangerJinKai02", "Source Han Serif SC", "Noto Serif CJK SC", "Songti SC", Georgia, serif;
+      font-size: 9pt;
+      color: #6b6a64;
+    }
+  }
+  @page:first {
+    @top-right { content: ""; }
+    @bottom-center { content: ""; }
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --parchment: #f5f4ed;
+    --ivory:     #faf9f5;
+    --near-black:#141413;
+    --dark-warm: #3d3d3a;
+    --olive:     #504e49;
+    --stone:     #6b6a64;
+    --brand:     #1B365D;
+    --border:    #e8e6dc;
+    --border-soft:#e5e3d8;
+    --tag-bg:    #E4ECF5;
+    --serif: "TsangerJinKai02", "Source Han Serif SC", "Noto Serif CJK SC", "Songti SC", "STSong", Georgia, serif;
+    --sans: var(--serif);
+    --rhythm-module:  14pt;
+    --rhythm-section: 18pt;
+  }
+
+  html, body { background: var(--parchment); }
+
+  @media screen {
+    body { max-width: 210mm; margin: 0 auto; padding: 20mm 22mm 22mm 22mm; }
+  }
+
+  body {
+    color: var(--near-black);
+    font-family: var(--serif);
+    font-size: 10.5pt;
+    line-height: 1.55;
+    letter-spacing: 0.3pt;
+    widows: 3;
+    orphans: 3;
+  }
+
+  /* ========== COVER ========== */
+  .cover {
+    min-height: 240mm;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 40mm 0 0 0;
+    break-after: page;
+  }
+  .cover-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8pt;
+    font-family: var(--sans);
+    font-size: 10pt;
+    color: var(--brand);
+    letter-spacing: 1.5pt;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-bottom: 18pt;
+  }
+  .cover-eyebrow::before {
+    content: "";
+    width: 9pt;
+    height: 1.5pt;
+    border-radius: 0.75pt;
+    background: var(--brand);
+    flex-shrink: 0;
+  }
+  .cover-title {
+    font-size: 36pt;
+    font-weight: 500;
+    color: var(--near-black);
+    line-height: 1.15;
+    letter-spacing: 0.3pt;
+    margin-bottom: 16pt;
+  }
+  .cover-sub {
+    font-family: var(--sans);
+    font-size: 14pt;
+    color: var(--olive);
+    line-height: 1.5;
+    max-width: 85%;
+    margin-bottom: 30pt;
+  }
+  .cover-meta {
+    font-family: var(--sans);
+    font-size: 10pt;
+    color: var(--stone);
+    line-height: 1.5;
+  }
+  .cover-meta strong {
+    color: var(--dark-warm);
+    font-weight: 500;
+  }
+
+  /* ========== TOC ========== */
+  .toc { break-after: page; }
+  .toc h2 {
+    font-size: 22pt;
+    font-weight: 500;
+    margin-bottom: var(--rhythm-module);
+    border-left: 2.5pt solid var(--brand);
+    border-radius: 1.5pt;
+    padding-left: 8pt;
+  }
+  .toc-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 6pt 0;
+    border-bottom: 0.3pt dotted var(--border);
+    font-size: 11pt;
+  }
+  .toc-item:last-of-type { border-bottom: none; }
+  .toc-num {
+    color: var(--brand);
+    font-weight: 500;
+    min-width: 30pt;
+  }
+  .toc-title {
+    flex: 1;
+    color: var(--near-black);
+    padding-left: 6pt;
+  }
+
+  /* ========== HEADINGS ========== */
+  h1 {
+    font-size: 22pt;
+    font-weight: 500;
+    line-height: 1.2;
+    margin: 0 0 10pt 0;
+    border-left: 2.5pt solid var(--brand);
+    border-radius: 1.5pt;
+    padding-left: 8pt;
+    color: var(--near-black);
+    break-after: avoid;
+    string-set: section-title content();
+  }
+
+  h2 {
+    font-size: 16pt;
+    font-weight: 500;
+    line-height: 1.25;
+    margin: 24pt 0 8pt 0;
+    color: var(--near-black);
+    break-after: avoid;
+  }
+
+  h3 {
+    font-size: 13pt;
+    font-weight: 500;
+    line-height: 1.3;
+    margin: 18pt 0 6pt 0;
+    color: var(--dark-warm);
+    break-after: avoid;
+  }
+
+  .chapter-num {
+    font-family: var(--sans);
+    font-size: 10pt;
+    color: var(--brand);
+    letter-spacing: 1pt;
+    text-transform: uppercase;
+    margin-bottom: 6pt;
+  }
+
+  /* ========== PARAGRAPHS ========== */
+  p {
+    margin: 0 0 10pt 0;
+    line-height: 1.55;
+    color: var(--near-black);
+    widows: 2;
+    orphans: 2;
+  }
+
+  .lead {
+    font-size: 12pt;
+    line-height: 1.55;
+    color: var(--dark-warm);
+    margin-bottom: var(--rhythm-module);
+  }
+
+  .hl { color: var(--brand); font-weight: 500; }
+  strong { font-weight: 500; }
+
+  /* ========== LISTS ========== */
+  ul, ol {
+    margin: 6pt 0 10pt 0;
+    padding-left: 20pt;
+    line-height: 1.55;
+  }
+  ul li::marker { color: var(--brand); }
+  ol li::marker { color: var(--brand); font-weight: 500; }
+
+  /* ========== QUOTE ========== */
+  blockquote, .quote {
+    border-left: 2pt solid var(--brand);
+    margin: 12pt 0;
+    padding: 4pt 0 4pt 16pt;
+    color: var(--olive);
+    line-height: 1.55;
+    break-inside: avoid;
+  }
+  blockquote .cite, .quote .cite {
+    display: block;
+    font-size: 9pt;
+    color: var(--stone);
+    margin-top: 4pt;
+  }
+
+  /* ========== TAG ========== */
+  .tag {
+    display: inline-block;
+    background: var(--tag-bg);
+    color: var(--brand);
+    font-family: var(--sans);
+    font-size: 9pt;
+    font-weight: 500;
+    padding: 1pt 6pt;
+    border-radius: 3pt;
+    margin-right: 4pt;
+  }
+
+  /* ========== TABLE ========== */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 9.5pt;
+    margin: 12pt 0;
+    break-inside: avoid;
+  }
+  table th {
+    text-align: left;
+    font-weight: 500;
+    color: var(--dark-warm);
+    padding: 6pt 8pt;
+    border-bottom: 1pt solid var(--border);
+    background: transparent;
+  }
+  table td {
+    padding: 5pt 8pt;
+    border-bottom: 0.3pt solid var(--border-soft);
+    vertical-align: top;
+  }
+
+  /* ========== CALLOUT ========== */
+  .callout {
+    background: var(--ivory);
+    border-left: 2pt solid var(--brand);
+    padding: 10pt 14pt;
+    border-radius: 3pt;
+    margin: 12pt 0;
+    line-height: 1.55;
+    break-inside: avoid;
+  }
+
+  /* ========== FIGURE ========== */
+  figure {
+    margin: 14pt 0;
+    break-inside: avoid;
+  }
+  figure svg {
+    display: block;
+    margin: 0 auto;
+    max-width: 78%;
+    height: auto;
+  }
+  figcaption {
+    font-family: var(--sans);
+    font-size: 9pt;
+    color: var(--stone);
+    margin-top: 6pt;
+    text-align: center;
+  }
+
+  /* ========== CHAPTER BREAK ========== */
+  .chapter { break-before: page; }
+
+  /* ========== DEFINITION LIST ========== */
+  .def-list { margin: 8pt 0 14pt 0; }
+  .def-item {
+    margin: 10pt 0;
+    line-height: 1.55;
+  }
+  .def-term {
+    font-weight: 500;
+    color: var(--brand);
+    display: inline;
+  }
+  .def-term::after {
+    content: "：";
+    color: var(--near-black);
+  }
+  .def-desc {
+    display: inline;
+    color: var(--near-black);
+  }
+
+  /* ========== RULE SET ========== */
+  .rule-set {
+    background: var(--ivory);
+    border-radius: 4pt;
+    padding: 12pt 16pt;
+    margin: 10pt 0;
+    break-inside: avoid;
+  }
+  .rule-set-title {
+    font-size: 11pt;
+    font-weight: 500;
+    color: var(--brand);
+    margin-bottom: 6pt;
+  }
+  .rule-set ul {
+    margin: 4pt 0 0 0;
+  }
+
+  /* ========== CLOSING ========== */
+  .colophon {
+    margin-top: 30pt;
+    padding-top: 14pt;
+    border-top: 0.5pt solid var(--border);
+    font-size: 10pt;
+    color: var(--stone);
+    line-height: 1.5;
+  }
+</style>
+</head>
+<body>
+
+<!-- ═════════════ COVER ═════════════ -->
+<section class="cover">
+  <div>
+    <div class="cover-eyebrow">传统文化 · 参考</div>
+    <div class="cover-title">道教规矩</div>
+    <div class="cover-sub">戒律·斋醮仪式·日常修行·服饰礼仪<br>规范道士行为举止，遵循道家基本教义与传统规范</div>
+  </div>
+  <div class="cover-meta">
+    <strong>道教文化参考系列</strong><br>
+    版本 V1.0  ·  2026 年 7 月
+  </div>
+</section>
+
+<!-- ═════════════ 目录 ═════════════ -->
+<section class="toc">
+  <h2>目录</h2>
+  <div class="toc-item">
+    <span class="toc-num">01</span>
+    <span class="toc-title">戒律</span>
+  </div>
+  <div class="toc-item">
+    <span class="toc-num">02</span>
+    <span class="toc-title">斋醮仪式</span>
+  </div>
+  <div class="toc-item">
+    <span class="toc-num">03</span>
+    <span class="toc-title">日常修行</span>
+  </div>
+  <div class="toc-item">
+    <span class="toc-num">04</span>
+    <span class="toc-title">服饰礼仪</span>
+  </div>
+  <div class="toc-item">
+    <span class="toc-num">05</span>
+    <span class="toc-title">结语</span>
+  </div>
+</section>
+
+<!-- ═════════════ Chapter 01：戒律 ═════════════ -->
+<section class="chapter" id="ch-commandments">
+  <div class="chapter-num">01 · Commandments</div>
+  <h1>戒律</h1>
+
+  <p class="lead">
+    道教有着诸多规矩，戒律是规范道士行为举止的根本准则，旨在培养善良、正直的品德，使修道者清心寡欲、持守正道。
+  </p>
+
+  <div class="rule-set">
+    <div class="rule-set-title"><span class="tag">五戒</span> 最基本的戒律</div>
+    <p>五戒是道教最基本的戒律，旨在规范道士的行为举止，培养善良、正直的品德。</p>
+    <ul>
+      <li><strong>不杀生</strong>——慈悲为怀，尊重一切生命</li>
+      <li><strong>不偷盗</strong>——安分守己，不取非分之财</li>
+      <li><strong>不邪淫</strong>——洁身自好，不犯男女之欲</li>
+      <li><strong>不妄语</strong>——言语真诚，不欺诳他人</li>
+      <li><strong>不饮酒</strong>——保持神志清醒，不因酒乱性</li>
+    </ul>
+  </div>
+
+  <div class="rule-set">
+    <div class="rule-set-title"><span class="tag">八戒</span> 五戒的延伸</div>
+    <p>在五戒基础上，从生活细节上进一步约束道士，使其保持清心寡欲：</p>
+    <ul>
+      <li><strong>不坐高广大床</strong>——弃奢华，守简朴</li>
+      <li><strong>不著华鬘好香涂身</strong>——不装饰打扮，淡泊外在</li>
+      <li><strong>不歌舞观听</strong>——不沉溺声色，守心于道</li>
+    </ul>
+  </div>
+
+  <div class="rule-set">
+    <div class="rule-set-title"><span class="tag">十戒</span> 人伦道德与社会秩序</div>
+    <p>十戒涵盖了对人伦道德、社会秩序等方面的规范：</p>
+    <ul>
+      <li><strong>不得违戾父母师长</strong>——孝顺父母，尊敬师长</li>
+      <li><strong>不得杀生屠害</strong>——不伤害生命</li>
+      <li><strong>不得叛逆君王</strong>——忠君爱国，遵守秩序</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ═════════════ Chapter 02：斋醮仪式 ═════════════ -->
+<section class="chapter" id="ch-rituals">
+  <div class="chapter-num">02 · Rituals</div>
+  <h1>斋醮仪式</h1>
+
+  <p class="lead">
+    斋醮是道教特有的宗教仪式，通过严格的坛场设置、程序化的仪式流程与庄重的科仪音乐，营造人与神灵沟通的神圣场域。
+  </p>
+
+  <h2>坛场设置</h2>
+  <p>斋醮仪式有严格的坛场设置要求，包括神位的摆放、供品的陈列、法器的使用等。坛场的布置体现了道教宇宙观的具象化表达：</p>
+
+  <figure>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 280" width="480" height="280" style="background:#f5f4ed">
+      <defs>
+        <marker id="arr" markerWidth="6" markerHeight="4" refX="6" refY="2" orient="auto">
+          <polygon points="0 0, 6 2, 0 4" fill="#1B365D" />
+        </marker>
+      </defs>
+      <style>text { font-family: "TsangerJinKai02", "Source Han Serif SC", "Noto Serif CJK SC", Georgia, serif; }</style>
+      <!-- 三清 -->
+      <rect x="195" y="30" width="90" height="40" rx="6" ry="6" fill="#1B365D" />
+      <text x="240" y="52" font-size="13" text-anchor="middle" font-weight="500" fill="#faf9f5" dy="4.55">三清</text>
+      <!-- 四御 -->
+      <rect x="95" y="90" width="70" height="34" rx="4" ry="4" fill="#faf9f5" stroke="#504e49" stroke-width="0.8" />
+      <text x="130" y="110" font-size="11" text-anchor="middle" fill="#141413" dy="3.85">四御</text>
+      <rect x="315" y="90" width="70" height="34" rx="4" ry="4" fill="#faf9f5" stroke="#504e49" stroke-width="0.8" />
+      <text x="350" y="110" font-size="11" text-anchor="middle" fill="#141413" dy="3.85">四御</text>
+      <!-- 供桌 -->
+      <rect x="170" y="140" width="140" height="20" rx="2" ry="2" fill="#e8e6dc" />
+      <text x="240" y="153" font-size="9" text-anchor="middle" fill="#504e49" dy="3.15">供桌 · 香炉 · 供品</text>
+      <!-- 法器位 -->
+      <rect x="40" y="180" width="60" height="26" rx="4" ry="4" fill="#faf9f5" stroke="#e8e6dc" stroke-width="1" />
+      <text x="70" y="197" font-size="10" text-anchor="middle" fill="#504e49" dy="3.5">法器</text>
+      <rect x="380" y="180" width="60" height="26" rx="4" ry="4" fill="#faf9f5" stroke="#e8e6dc" stroke-width="1" />
+      <text x="410" y="197" font-size="10" text-anchor="middle" fill="#504e49" dy="3.5">法器</text>
+      <!-- 道士 -->
+      <rect x="95" y="225" width="60" height="26" rx="4" ry="4" fill="#faf9f5" stroke="#e8e6dc" stroke-width="1" />
+      <text x="125" y="242" font-size="10" text-anchor="middle" fill="#504e49" dy="3.5">道士</text>
+      <rect x="325" y="225" width="60" height="26" rx="4" ry="4" fill="#faf9f5" stroke="#e8e6dc" stroke-width="1" />
+      <text x="355" y="242" font-size="10" text-anchor="middle" fill="#504e49" dy="3.5">道士</text>
+      <!-- 连线 -->
+      <line x1="240" y1="70" x2="130" y2="90" stroke="#504e49" stroke-width="0.6" stroke-dasharray="3 2" />
+      <line x1="240" y1="70" x2="350" y2="90" stroke="#504e49" stroke-width="0.6" stroke-dasharray="3 2" />
+      <line x1="240" y1="140" x2="240" y2="120" stroke="#504e49" stroke-width="0.6" />
+      <line x1="70" y1="206" x2="125" y2="225" stroke="#504e49" stroke-width="0.6" stroke-dasharray="3 2" />
+      <line x1="410" y1="206" x2="355" y2="225" stroke="#504e49" stroke-width="0.6" stroke-dasharray="3 2" />
+    </svg>
+    <figcaption>图 1：斋醮坛场的基本布局示意 —— 三清居中央，四御左右配，供桌前设，法器与道士分列两侧</figcaption>
+  </figure>
+
+  <p>如常见的三清神位居中央，左右配以四御等其他神祇。坛场布置需严格遵循科仪规范，不可随意变更。</p>
+
+  <h2>仪式程序</h2>
+  <p>斋醮仪式通常包含一系列严密的环节，道士们需身着道袍，手持法器，按照特定的节奏和仪轨进行：</p>
+  <ol>
+    <li><strong>启坛</strong>——开启坛场，宣布仪式开始</li>
+    <li><strong>请神</strong>——诵经召请，迎请神灵降临</li>
+    <li><strong>诵经</strong>——诵读经典，赞颂神明功德</li>
+    <li><strong>礼拜</strong>——行跪拜之礼，表达虔诚</li>
+    <li><strong>上表</strong>——向神明呈上表文，陈述祈愿</li>
+    <li><strong>送神</strong>——仪式结束，恭送神灵返回天庭</li>
+  </ol>
+
+  <h2>科仪音乐</h2>
+  <p>斋醮仪式中常伴有音乐，通过钟、鼓、磬、笛、笙等乐器演奏，配合道士的唱诵，营造出庄严肃穆、神秘空灵的氛围。科仪音乐不仅增强了仪式的感染力，也是道教文化中重要的艺术遗产。</p>
+
+  <div class="callout">
+    科仪音乐融合了宫廷雅乐与民间音乐的元素，其旋律古朴悠远，节奏舒缓凝重，旨在引导参与者进入虔诚的宗教心境。
+  </div>
+</section>
+
+<!-- ═════════════ Chapter 03：日常修行 ═════════════ -->
+<section class="chapter" id="ch-practice">
+  <div class="chapter-num">03 · Daily Practice</div>
+  <h1>日常修行</h1>
+
+  <p class="lead">
+    修道贵在持之以恒。诵经、打坐、持戒修行是道士每日必修的功课，三者相辅相成，共同构成道教修行的核心内容。
+  </p>
+
+  <h2>诵经</h2>
+  <p>道士每日会定时诵经，如《道德经》《南华经》《玉皇经》等。通过诵经领悟道经中的教义和哲理，以达到修身养性、增长智慧的目的。诵经不仅是宗教功课，更是一种心灵的净化和精神的滋养。</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>经典</th>
+        <th>地位</th>
+        <th>核心内容</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>道德经</strong></td>
+        <td>道教根本经典</td>
+        <td>道与德的哲学阐述，修道之总纲</td>
+      </tr>
+      <tr>
+        <td><strong>南华经</strong></td>
+        <td>庄子及其后学著作</td>
+        <td>逍遥自在、齐物忘我的境界</td>
+      </tr>
+      <tr>
+        <td><strong>玉皇经</strong></td>
+        <td>斋醮常用经典</td>
+        <td>赞颂玉皇大帝功德，祈福消灾</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>打坐</h2>
+  <p>打坐是道教修炼精气神的重要方法。修行者找安静之处，跏趺而坐，调整呼吸，排除杂念，进入冥想状态，以修炼自身的精气神，追求心灵的宁静和与道的契合。打坐的核心要领包括：</p>
+  <ul>
+    <li><strong>调身</strong>——跏趺坐姿，脊背挺直，全身放松</li>
+    <li><strong>调息</strong>——深长匀细的呼吸，由粗入细，渐至胎息</li>
+    <li><strong>调心</strong>——排除杂念，心不外驰，渐入虚静</li>
+  </ul>
+
+  <blockquote>
+    致虚极，守静笃。万物并作，吾以观复。
+    <span class="cite">——老子《道德经》</span>
+  </blockquote>
+
+  <h2>持戒修行</h2>
+  <p>时刻以戒律规范自己的言行举止，不仅要在行为上遵守，更要在内心深处保持警觉，防止邪念滋生。持戒是修行的基础，也是修行境界的体现。道士将戒律内化为日常生活的自觉准则，在举手投足间体现道家的精神风范。</p>
+</section>
+
+<!-- ═════════════ Chapter 04：服饰礼仪 ═════════════ -->
+<section class="chapter" id="ch-attire">
+  <div class="chapter-num">04 · Attire &amp; Etiquette</div>
+  <h1>服饰礼仪</h1>
+
+  <p class="lead">
+    道教的服饰与礼仪不仅是外在形式，更承载着深厚的文化内涵和宗教象征。不同的服饰适用于不同场合，礼仪则体现了道士的修为与素养。
+  </p>
+
+  <h2>服饰</h2>
+  <p>道士服饰有多种类型，颜色和款式都有一定规范，不同场合穿着不同服饰：</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>服饰</th>
+        <th>颜色</th>
+        <th>用途</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>大褂</strong></td>
+        <td>黑色</td>
+        <td>日常穿着，最为常见</td>
+      </tr>
+      <tr>
+        <td><strong>道袍</strong></td>
+        <td>蓝色或青色</td>
+        <td>正式场合、诵经礼忏</td>
+      </tr>
+      <tr>
+        <td><strong>戒衣</strong></td>
+        <td>紫色或法色</td>
+        <td>受戒仪式、盛大法会</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>服饰的颜色与款式象征着道士的修为等级和所行法事的性质。紫色戒衣通常代表较高修为，青色道袍则为日常法事所着。</p>
+
+  <h2>礼仪</h2>
+  <p>道教的礼仪以谦恭恭敬为核心，主要有以下两种：</p>
+
+  <div style="margin: 10pt 0;">
+    <div style="display: flex; gap: 20pt; flex-wrap: wrap;">
+      <div style="flex: 1; min-width: 180pt; background: var(--ivory); border-left: 2pt solid var(--brand); border-radius: 3pt; padding: 8pt 12pt;">
+        <div style="font-weight: 500; color: var(--brand); margin-bottom: 4pt;">稽首礼</div>
+        <p style="margin: 0; font-size: 10pt;">头触地的大礼。用于对神明或师长，是道教最隆重的礼节之一，表达极度的虔诚与尊敬。</p>
+      </div>
+      <div style="flex: 1; min-width: 180pt; background: var(--ivory); border-left: 2pt solid var(--brand); border-radius: 3pt; padding: 8pt 12pt;">
+        <div style="font-weight: 500; color: var(--brand); margin-bottom: 4pt;">作揖礼</div>
+        <p style="margin: 0; font-size: 10pt;">双手抱拳，左手抱右手，自然于胸前晃动。用于日常见面问候，是道士之间最常用的礼节。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════════ Chapter 05：结语 ═════════════ -->
+<section class="chapter" id="ch-closing">
+  <div class="chapter-num">05 · Closing</div>
+  <h1>结语</h1>
+
+  <p class="lead">
+    道教的规矩在不同的派别和道观可能会有一些细微差异，但总体上都遵循着道家的基本教义和传统规范。
+  </p>
+
+  <p>从戒律的持守，到斋醮仪式的庄严；从每日诵经打坐的坚持，到服饰礼仪的讲究——道教的一整套规矩体系，既是修道者通向悟道的阶梯，也是中华传统文化中一笔珍贵的精神遗产。</p>
+
+  <p>这些规矩不是束缚，而是指引。它们帮助修道者在纷繁世界中保持内心的宁静与清明，在言行举止间体现道法自然的精神境界。</p>
+
+  <div class="colophon">
+    道教文化参考系列 · 本文档基于公开资料整理，仅供文化参考。
+  </div>
+</section>
+
+</body>
+</html>

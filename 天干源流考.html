@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>天干源流考</title>
+<meta name="author" content="Kami">
+<meta name="description" content="天干的起源与演变——神话道教说法、正史考古考证、名字字面含义及后期发展完善。">
+<meta name="keywords" content="天干, 地支, 甲骨文, 道教, 黄帝, 大挠, 十日神话, 五行">
+<meta name="generator" content="Kami">
+<style>
+  @font-face {
+    font-family: "TsangerJinKai02";
+    src: url("https://cdn.jsdelivr.net/gh/tw93/Kami@main/assets/fonts/TsangerJinKai02-W04.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "TsangerJinKai02";
+    src: url("https://cdn.jsdelivr.net/gh/tw93/Kami@main/assets/fonts/TsangerJinKai02-W05.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+  }
+
+  @page {
+    size: A4;
+    margin: 20mm 22mm 22mm 22mm;
+    background: #f5f4ed;
+    @top-right {
+      content: string(section-title);
+      font-family: "TsangerJinKai02", "Source Han Serif SC", "Noto Serif CJK SC", "Songti SC", Georgia, serif;
+      font-size: 8pt;
+      color: #6b6a64;
+    }
+    @bottom-center {
+      content: counter(page) "  ·  天干源流考";
+      font-family: "TsangerJinKai02", "Source Han Serif SC", "Noto Serif CJK SC", "Songti SC", Georgia, serif;
+      font-size: 9pt;
+      color: #6b6a64;
+    }
+  }
+  @page:first {
+    @top-right { content: ""; }
+    @bottom-center { content: ""; }
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --parchment: #f5f4ed;
+    --ivory:     #faf9f5;
+    --near-black:#141413;
+    --dark-warm: #3d3d3a;
+    --olive:     #504e49;
+    --stone:     #6b6a64;
+    --brand:     #1B365D;
+    --border:    #e8e6dc;
+    --border-soft:#e5e3d8;
+    --tag-bg:    #E4ECF5;
+    --serif: "TsangerJinKai02", "Source Han Serif SC", "Noto Serif CJK SC", "Songti SC", "STSong", Georgia, serif;
+    --sans: var(--serif);
+    --rhythm-module:  14pt;
+    --rhythm-section: 18pt;
+  }
+
+  html, body { background: var(--parchment); }
+
+  @media screen {
+    body { max-width: 210mm; margin: 0 auto; padding: 20mm 22mm 22mm 22mm; }
+  }
+
+  body {
+    color: var(--near-black);
+    font-family: var(--serif);
+    font-size: 10.5pt;
+    line-height: 1.55;
+    letter-spacing: 0.3pt;
+    widows: 3;
+    orphans: 3;
+  }
+
+  .cover {
+    min-height: 240mm;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 40mm 0 0 0;
+    break-after: page;
+  }
+  .cover-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8pt;
+    font-family: var(--sans);
+    font-size: 10pt;
+    color: var(--brand);
+    letter-spacing: 1.5pt;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-bottom: 18pt;
+  }
+  .cover-eyebrow::before {
+    content: "";
+    width: 9pt;
+    height: 1.5pt;
+    border-radius: 0.75pt;
+    background: var(--brand);
+    flex-shrink: 0;
+  }
+  .cover-title {
+    font-size: 36pt;
+    font-weight: 500;
+    color: var(--near-black);
+    line-height: 1.15;
+    letter-spacing: 0.3pt;
+    margin-bottom: 16pt;
+  }
+  .cover-sub {
+    font-family: var(--sans);
+    font-size: 14pt;
+    color: var(--olive);
+    line-height: 1.5;
+    max-width: 85%;
+    margin-bottom: 30pt;
+  }
+  .cover-meta {
+    font-family: var(--sans);
+    font-size: 10pt;
+    color: var(--stone);
+    line-height: 1.5;
+  }
+  .cover-meta strong {
+    color: var(--dark-warm);
+    font-weight: 500;
+  }
+
+  .toc { break-after: page; }
+  .toc h2 {
+    font-size: 22pt;
+    font-weight: 500;
+    margin-bottom: var(--rhythm-module);
+    border-left: 2.5pt solid var(--brand);
+    border-radius: 1.5pt;
+    padding-left: 8pt;
+  }
+  .toc-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 6pt 0;
+    border-bottom: 0.3pt dotted var(--border);
+    font-size: 11pt;
+  }
+  .toc-item:last-of-type { border-bottom: none; }
+  .toc-num {
+    color: var(--brand);
+    font-weight: 500;
+    min-width: 30pt;
+  }
+  .toc-title {
+    flex: 1;
+    color: var(--near-black);
+    padding-left: 6pt;
+  }
+
+  h1 {
+    font-size: 22pt;
+    font-weight: 500;
+    line-height: 1.2;
+    margin: 0 0 10pt 0;
+    border-left: 2.5pt solid var(--brand);
+    border-radius: 1.5pt;
+    padding-left: 8pt;
+    color: var(--near-black);
+    break-after: avoid;
+    string-set: section-title content();
+  }
+  h2 {
+    font-size: 16pt;
+    font-weight: 500;
+    line-height: 1.25;
+    margin: 24pt 0 8pt 0;
+    color: var(--near-black);
+    break-after: avoid;
+  }
+  h3 {
+    font-size: 13pt;
+    font-weight: 500;
+    line-height: 1.3;
+    margin: 18pt 0 6pt 0;
+    color: var(--dark-warm);
+    break-after: avoid;
+  }
+  .chapter-num {
+    font-family: var(--sans);
+    font-size: 10pt;
+    color: var(--brand);
+    letter-spacing: 1pt;
+    text-transform: uppercase;
+    margin-bottom: 6pt;
+  }
+  .sub-chapter-num {
+    font-family: var(--sans);
+    font-size: 8.5pt;
+    color: var(--stone);
+    letter-spacing: 0.5pt;
+    text-transform: uppercase;
+    margin-bottom: 2pt;
+  }
+
+  p {
+    margin: 0 0 10pt 0;
+    line-height: 1.55;
+    color: var(--near-black);
+    widows: 2;
+    orphans: 2;
+  }
+  .lead {
+    font-size: 12pt;
+    line-height: 1.55;
+    color: var(--dark-warm);
+    margin-bottom: var(--rhythm-module);
+  }
+  .hl { color: var(--brand); font-weight: 500; }
+  strong { font-weight: 500; }
+
+  ul, ol {
+    margin: 6pt 0 10pt 0;
+    padding-left: 20pt;
+    line-height: 1.55;
+  }
+  ul li::marker { color: var(--brand); }
+  ol li::marker { color: var(--brand); font-weight: 500; }
+
+  blockquote {
+    border-left: 2pt solid var(--brand);
+    margin: 12pt 0;
+    padding: 4pt 0 4pt 16pt;
+    color: var(--olive);
+    line-height: 1.55;
+    break-inside: avoid;
+  }
+  blockquote .cite {
+    display: block;
+    font-size: 9pt;
+    color: var(--stone);
+    margin-top: 4pt;
+  }
+
+  .tag {
+    display: inline-block;
+    background: var(--tag-bg);
+    color: var(--brand);
+    font-family: var(--sans);
+    font-size: 9pt;
+    font-weight: 500;
+    padding: 1pt 6pt;
+    border-radius: 3pt;
+    margin-right: 4pt;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 9.5pt;
+    margin: 12pt 0;
+    break-inside: avoid;
+  }
+  table th {
+    text-align: left;
+    font-weight: 500;
+    color: var(--dark-warm);
+    padding: 6pt 8pt;
+    border-bottom: 1pt solid var(--border);
+    background: transparent;
+  }
+  table td {
+    padding: 5pt 8pt;
+    border-bottom: 0.3pt solid var(--border-soft);
+    vertical-align: top;
+  }
+
+  .callout {
+    background: var(--ivory);
+    border-left: 2pt solid var(--brand);
+    padding: 10pt 14pt;
+    border-radius: 3pt;
+    margin: 12pt 0;
+    line-height: 1.55;
+    break-inside: avoid;
+  }
+
+  .chapter { break-before: page; }
+  .section-break { margin-top: 20pt; }
+
+  .ten-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12pt;
+    margin: 12pt 0;
+  }
+  .ten-card {
+    background: var(--ivory);
+    border-left: 2pt solid var(--brand);
+    border-radius: 3pt;
+    padding: 8pt 12pt;
+  }
+  .ten-card .gan {
+    font-size: 18pt;
+    font-weight: 500;
+    color: var(--brand);
+    line-height: 1.2;
+  }
+  .ten-card .meaning {
+    font-size: 9.5pt;
+    color: var(--near-black);
+    margin-top: 4pt;
+    line-height: 1.5;
+  }
+
+  .summary-box {
+    background: var(--ivory);
+    border-radius: 6pt;
+    padding: 14pt 18pt;
+    margin: 14pt 0;
+    break-inside: avoid;
+  }
+  .summary-box h3 {
+    margin-top: 0;
+    font-size: 13pt;
+  }
+
+  .colophon {
+    margin-top: 30pt;
+    padding-top: 14pt;
+    border-top: 0.5pt solid var(--border);
+    font-size: 10pt;
+    color: var(--stone);
+    line-height: 1.5;
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══════════ COVER ═══════════ -->
+<section class="cover">
+  <div>
+    <div class="cover-eyebrow">传统文化 · 考源</div>
+    <div class="cover-title">天干源流考</div>
+    <div class="cover-sub">神话起源 · 考古实证 · 文字本义 · 历史演变<br>梳理十天干的起源、发展与文化内涵</div>
+  </div>
+  <div class="cover-meta">
+    <strong>传统文化考源系列</strong><br>
+    版本 V1.0  ·  2026 年 7 月
+  </div>
+</section>
+
+<!-- ═══════════ TOC ═══════════ -->
+<section class="toc">
+  <h2>目录</h2>
+  <div class="toc-item">
+    <span class="toc-num">01</span>
+    <span class="toc-title">神话道家说法</span>
+  </div>
+  <div class="toc-item">
+    <span class="toc-num">02</span>
+    <span class="toc-title">正史文史考古真实起源</span>
+  </div>
+  <div class="toc-item">
+    <span class="toc-num">03</span>
+    <span class="toc-title">十天干名字字面含义</span>
+  </div>
+  <div class="toc-item">
+    <span class="toc-num">04</span>
+    <span class="toc-title">后期发展完善</span>
+  </div>
+  <div class="toc-item">
+    <span class="toc-num">05</span>
+    <span class="toc-title">极简总结</span>
+  </div>
+</section>
+
+<!-- ═══════════ Chapter 01 ═══════════ -->
+<section class="chapter" id="ch-myth">
+  <div class="chapter-num">01 · Mythology &amp; Taoism</div>
+  <h1>神话道家说法</h1>
+
+  <p class="lead">道门中流传最广的两种说法，将天干地支的起源追溯到天地初开之时。</p>
+
+  <h2>先天本源说</h2>
+  <p>天干是先天云篆天书。元始天尊开天之后，天地阴阳五行自然生出十道先天符文，即为十天干。地支则是大地十二道灵文。二者合称天干地支，是宇宙本源的文字化现。</p>
+
+  <h2>人皇创世说</h2>
+  <p>上古人皇氏观天象，见日月星辰运行自带十种天象符号，刻录成文，定为十干，用来区分阴阳、纪岁。</p>
+
+  <div class="callout">
+    <strong>道门核心观点：</strong>天干不是人创造，是天地本有的文字，上古圣人只是发现、记录下来。
+  </div>
+</section>
+
+<!-- ═══════════ Chapter 02 ═══════════ -->
+<section class="chapter" id="ch-history">
+  <div class="chapter-num">02 · Historical Origins</div>
+  <h1>正史文史考古真实起源</h1>
+
+  <p class="lead">历史学界的定论：天干起源于殷商甲骨文，经过上古圣人的整合完善，成为中华文明最早的文字系统之一。</p>
+
+  <h2>最早源头：殷商甲骨文（距今 3600 年）</h2>
+  <p>出土商代甲骨文中，大量用甲乙丙丁记商王庙号、祭祀日期，这是天干最早的实物证据。商朝王室贵族起名全用天干：<span class="hl">太甲、沃丁、武丁、祖庚、祖辛</span>。</p>
+  <p>此时的作用：专门用来记日子、排祭祀次序，只有甲到癸十个字，没有搭配地支。</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>商王</th>
+        <th>天干名</th>
+        <th>说明</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>太甲</td><td>甲</td><td>商朝第四位君主</td></tr>
+      <tr><td>沃丁</td><td>丁</td><td>太甲之子</td></tr>
+      <tr><td>武丁</td><td>丁</td><td>商朝第二十二位君主，鼎盛时期</td></tr>
+      <tr><td>祖庚</td><td>庚</td><td>武丁之子</td></tr>
+      <tr><td>祖辛</td><td>辛</td><td>商朝第十四位君主</td></tr>
+    </tbody>
+  </table>
+
+  <h2>发明者：上古伏羲、大挠（古籍统一记载）</h2>
+  <p>《吕氏春秋》《五行大义》《史记》全部记录：黄帝命史官大挠，观日月、五星、四季五行，推演阴阳，定十天干、十二地支。</p>
+
+  <blockquote>
+    黄帝命大挠探五行之情，占斗纲所建，始作甲子。
+    <span class="cite">—— 古籍记载</span>
+  </blockquote>
+
+  <p>原文逻辑：天上有十个太阳循环轮值，每个太阳对应一个干；地上十二月对应十二支，天干配地支，用来纪年、纪月、纪日、计时。</p>
+
+  <h2>十日神话与天干的对应</h2>
+  <p>上古传说东方扶桑树上栖息十日，轮流上天值日。十日轮流出现，正好十个符号，所以天干一共十位：</p>
+
+  <table>
+    <thead>
+      <tr><th>太阳次序</th><th>对应天干</th><th>说明</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>第一日</td><td><strong>甲</strong></td><td>太阳之首</td></tr>
+      <tr><td>第二日</td><td><strong>乙</strong></td><td>阳中带阴</td></tr>
+      <tr><td>第三日</td><td><strong>丙</strong></td><td>光明显现</td></tr>
+      <tr><td>第四日</td><td><strong>丁</strong></td><td>形体稳固</td></tr>
+      <tr><td>第五日</td><td><strong>戊</strong></td><td>繁盛之极</td></tr>
+      <tr><td>第六日</td><td><strong>己</strong></td><td>成熟收敛</td></tr>
+      <tr><td>第七日</td><td><strong>庚</strong></td><td>秋杀之始</td></tr>
+      <tr><td>第八日</td><td><strong>辛</strong></td><td>成熟收割</td></tr>
+      <tr><td>第九日</td><td><strong>壬</strong></td><td>阳气潜藏</td></tr>
+      <tr><td>第十日</td><td><strong>癸</strong></td><td>蛰伏待新</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- ═══════════ Chapter 03 ═══════════ -->
+<section class="chapter" id="ch-meaning">
+  <div class="chapter-num">03 · Etymology</div>
+  <h1>十天干名字字面含义</h1>
+
+  <p class="lead">十干是描述万物从出生到消亡的完整生长周期——一套天干，完整走完春生、夏长、秋收、冬藏循环，是古人观察植物四季变化造出来的符号体系。</p>
+
+  <div class="ten-grid">
+    <div class="ten-card">
+      <div class="gan">甲</div>
+      <div class="meaning">草木破壳萌芽，万物初生。如种子破土而出，生命之始。</div>
+    </div>
+    <div class="ten-card">
+      <div class="gan">乙</div>
+      <div class="meaning">幼苗弯曲抽枝，慢慢生长。柔韧而顽强，曲折向上。</div>
+    </div>
+    <div class="ten-card">
+      <div class="gan">丙</div>
+      <div class="meaning">阳气旺盛，光明显现。如烈日当空，照耀万物。</div>
+    </div>
+    <div class="ten-card">
+      <div class="gan">丁</div>
+      <div class="meaning">草木长成，形体稳固。壮年之象，坚实有力。</div>
+    </div>
+    <div class="ten-card">
+      <div class="gan">戊</div>
+      <div class="meaning">草木繁茂，枝叶鼎盛。生命力达到顶峰。</div>
+    </div>
+    <div class="ten-card">
+      <div class="gan">己</div>
+      <div class="meaning">万物成熟，收敛定型。由盛转衰的临界点。</div>
+    </div>
+    <div class="ten-card">
+      <div class="gan">庚</div>
+      <div class="meaning">秋天肃杀，果实收敛。金气初现，收获之时。</div>
+    </div>
+    <div class="ten-card">
+      <div class="gan">辛</div>
+      <div class="meaning">万物收敛成熟，带新、收割之意。颗粒归仓。</div>
+    </div>
+    <div class="ten-card">
+      <div class="gan">壬</div>
+      <div class="meaning">阳气潜藏，孕育新生命。冬藏之象，蓄势待发。</div>
+    </div>
+    <div class="ten-card">
+      <div class="gan">癸</div>
+      <div class="meaning">万物蛰伏，等待下一轮新生。终点即起点，循环往复。</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ Chapter 04 ═══════════ -->
+<section class="chapter" id="ch-development">
+  <div class="chapter-num">04 · Evolution</div>
+  <h1>后期发展完善</h1>
+
+  <p class="lead">天干从单一的记日符号，逐步演变为覆盖命理、风水、符箓、奇门的庞大术数体系。</p>
+
+  <h2>商周时期</h2>
+  <p>只用天干记日，尚未与地支搭配使用。天干用于商王庙号命名和祭祀日期记录。</p>
+
+  <h2>春秋战国时期</h2>
+  <ul>
+    <li>天干搭配地支，出现六十甲子</li>
+    <li>划分天干阴阳、五行属性</li>
+    <li>开始应用于历法推算</li>
+  </ul>
+
+  <h2>汉代</h2>
+  <ul>
+    <li>完善十干五行体系</li>
+    <li>建立十干化合、相冲理论</li>
+    <li>纳入命理、风水、符箓、奇门全套术数体系</li>
+  </ul>
+
+  <h2>道教</h2>
+  <p>道教将天干化为云篆符文，用于画符、步罡、拜斗。十天干对应十星、十神、雷部神将，成为道教法术体系的重要组成部分。</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>时期</th>
+        <th>发展</th>
+        <th>意义</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>商周</td>
+        <td>十干记日、庙号</td>
+        <td>最早的实物文字证据</td>
+      </tr>
+      <tr>
+        <td>春秋战国</td>
+        <td>天干配地支，六十甲子</td>
+        <td>历法体系初步形成</td>
+      </tr>
+      <tr>
+        <td>汉代</td>
+        <td>五行化合、命理风水</td>
+        <td>术数体系全面建立</td>
+      </tr>
+      <tr>
+        <td>道教</td>
+        <td>云篆符文、雷部神将</td>
+        <td>宗教化、神秘化</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- ═══════════ Chapter 05 ═══════════ -->
+<section class="chapter" id="ch-summary">
+  <div class="chapter-num">05 · Summary</div>
+  <h1>极简总结</h1>
+
+  <p class="lead">三个核心要点，概括天干的全部源流。</p>
+
+  <div class="summary-box">
+    <h3>1. 神话与道教视角</h3>
+    <p>天干是天地先天云篆，是宇宙本源的文字化现。大挠只是记录整理，并非原创发明者。</p>
+  </div>
+
+  <div class="summary-box">
+    <h3>2. 历史与考古视角</h3>
+    <p>商朝已有完整的十干文字（甲骨文实证）。黄帝史官大挠整合完善，造字灵感取自上古十日神话。</p>
+  </div>
+
+  <div class="summary-box">
+    <h3>3. 底层逻辑</h3>
+    <p>依据万物生长消亡的规律造字——春生、夏长、秋收、冬藏。天干十位完整对应植物的生命周期，用来记时间、分阴阳五行。</p>
+  </div>
+
+  <div class="colophon">
+    传统文化考源系列 · 本文档基于公开资料整理，仅供文化参考。
+  </div>
+</section>
+
+</body>
+</html>

@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>成慈高级奇门讲义</title>
+<style>
+  @page { size: 280mm 158mm; margin: 0; background: #f5f4ed; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --parchment:  #f5f4ed;
+    --ivory:      #faf9f5;
+    --near-black: #141413;
+    --dark-warm:  #3d3d3a;
+    --olive:      #504e49;
+    --stone:      #6b6a64;
+    --brand:      #1B365D;
+    --brand-tint: #EEF2F7;
+    --border:     #e8e6dc;
+    --serif: "Source Han Serif SC", "Noto Serif CJK SC", "Songti SC", "STSong", Georgia, serif;
+    --sans: "Source Han Serif SC", "Noto Serif CJK SC", "Songti SC", "STSong", serif;
+    --mono: "SF Mono", "Fira Code", Consolas, monospace;
+  }
+
+  body { color: var(--near-black); font-family: var(--sans); font-size: 12pt; line-height: 1.5; background: var(--parchment); }
+  .slide {
+    width: 280mm; height: 158mm; padding: 14mm 18mm;
+    background: var(--parchment); break-after: page;
+    position: relative;
+  }
+  .slide:last-child { break-after: auto; }
+
+  .title-bar {
+    background: var(--brand); color: white; padding: 6mm 14mm; margin: -14mm -18mm 10mm -18mm;
+    font-size: 20pt; font-weight: 600; font-family: var(--serif);
+    letter-spacing: 0.5pt;
+  }
+  .title-bar span { font-size: 11pt; font-weight: 400; opacity: 0.8; margin-left: 10mm; }
+  .subtitle { font-size: 11pt; color: var(--olive); margin-bottom: 6pt; font-style: italic; }
+  .content { display: flex; gap: 12mm; height: 110mm; }
+  .text-col { flex: 1; font-size: 10.5pt; line-height: 1.6; color: var(--near-black); }
+  .chart-col { flex: 0 0 auto; }
+
+  h2 { font-size: 28pt; font-family: var(--serif); font-weight: 600; color: var(--near-black); margin-bottom: 8pt; }
+  h3 { font-size: 16pt; font-family: var(--serif); font-weight: 500; color: var(--brand); margin-bottom: 6pt; }
+  .lead { font-size: 13pt; color: var(--dark-warm); margin-bottom: 10pt; }
+
+  .section-header {
+    font-size: 9pt; letter-spacing: 2pt; text-transform: uppercase;
+    color: var(--stone); border-bottom: 0.5pt solid var(--border); padding-bottom: 3pt; margin-bottom: 8pt;
+  }
+
+  ul { list-style: none; padding: 0; }
+  ul li { padding: 2pt 0; padding-left: 12pt; position: relative; }
+  ul li::before { content: "●"; position: absolute; left: 0; color: var(--brand); font-size: 7pt; top: 4pt; }
+
+  .highlight { color: var(--brand); font-weight: 500; }
+  .tag {
+    display: inline-block; background: var(--brand-tint); color: var(--brand);
+    padding: 1pt 6pt; border-radius: 2pt; font-size: 8pt; margin: 1pt;
+    letter-spacing: 0.3pt;
+  }
+
+  .grid-2 {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 8mm;
+  }
+  .grid-3 {
+    display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 6mm;
+  }
+
+  .card {
+    background: var(--ivory); border: 0.5pt solid var(--border); border-radius: 2pt;
+    padding: 5mm 6mm;
+  }
+  .card h4 { font-size: 11pt; color: var(--brand); margin-bottom: 3pt; font-family: var(--serif); }
+  .card p { font-size: 9pt; color: var(--dark-warm); line-height: 1.5; }
+
+  .co {
+    position: absolute; bottom: 12mm; left: 18mm; right: 18mm;
+    font-size: 10pt; color: var(--brand);
+    border-top: 0.5pt solid var(--border); padding-top: 4pt;
+  }
+
+  .chart-box {
+    border: 1pt solid var(--border); border-radius: 3pt; overflow: hidden;
+    background: var(--ivory);
+  }
+  .chart-box svg { display: block; width: 100%; height: auto; }
+
+  .page-num {
+    position: absolute; bottom: 10mm; right: 18mm;
+    font-family: var(--mono); font-size: 8pt; color: var(--stone);
+    letter-spacing: 0.5pt;
+  }
+</style>
+</head>
+<body>
+
+<!-- ===== SLIDE 1: TITLE ===== -->
+<div class="slide" style="display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;">
+  <div style="background:var(--brand);padding:12mm 20mm;border-radius:3pt;margin-bottom:10mm;width:90%;">
+    <h2 style="color:white;font-size:32pt;margin-bottom:6pt;">成慈高级奇门讲义</h2>
+    <p style="color:#ccd;font-size:16pt;">集民间之大成 · 汇百家之精髓</p>
+    <p style="color:#99a;font-size:11pt;margin-top:8pt;">成慈老师 2024年奇门遁甲高级研讨班</p>
+  </div>
+  <div style="text-align:left;width:80%;">
+    <p style="font-size:10pt;color:var(--dark-warm);margin:3pt 0;">▸ 茅山派第46代弟子 · 道教吕祖蓬莱派第19代弟子</p>
+    <p style="font-size:10pt;color:var(--dark-warm);margin:3pt 0;">▸ 国学智慧传播者 · 国学研究实战专家 · 茅山奇门遁甲术实战应用导师</p>
+    <p style="font-size:10pt;color:var(--dark-warm);margin:3pt 0;">▸ 收徒20余人 · 98家企业发展顾问 · 帮助1000多人答疑解惑</p>
+  </div>
+  <div class="page-num">01</div>
+</div>
+
+<!-- ===== SLIDE 2: TOC ===== -->
+<div class="slide">
+  <div class="title-bar">课程纲要 <span>奇门遁甲高级研讨班  ·  主要教学内容</span></div>
+  <div class="grid-2" style="margin-top:6mm;">
+    <div>
+      <div class="section-header">上篇 · 基础</div>
+      <ul style="font-size:10pt;">
+        <li>奇门演盘方法（数字加减法）</li>
+        <li>占卜应用类（27项秘诀）</li>
+        <li>奇门演局篇（起局定局）</li>
+        <li>12神将用法（壬遁法）</li>
+        <li>隐干用法（四种隐干）</li>
+        <li>占卜发用定律</li>
+        <li>六亲占卜法</li>
+        <li>流年流月运势</li>
+      </ul>
+    </div>
+    <div>
+      <div class="section-header">下篇 · 应用</div>
+      <ul style="font-size:10pt;">
+        <li>婚姻合婚占卜</li>
+        <li>工作占卜秘诀</li>
+        <li>财运与投资占卜</li>
+        <li>三传用法（壬遁结合）</li>
+        <li>胎产断男女</li>
+        <li>阳宅风水占卜</li>
+        <li>阴宅风水占卜</li>
+        <li>择吉与奇门外应</li>
+      </ul>
+    </div>
+  </div>
+  <div class="co">集民间之大成 · 汇百家之精髓</div>
+  <div class="page-num">02</div>
+</div>
+
+<!-- ===== SLIDE 3: 演局方法 ===== -->
+<div class="slide">
+  <div class="title-bar">奇门演局 · 起局方法 <span>时家转盘奇门遁甲 · 阴阳遁18局</span></div>
+  <div style="display:flex;gap:10mm;margin-top:4mm;">
+    <div style="flex:1.2;">
+      <div class="section-header">基本法则</div>
+      <ul style="font-size:9.5pt;">
+        <li><span class="highlight">冬至</span>后用阳遁 · <span class="highlight">夏至</span>后用阴遁</li>
+        <li>阴阳各9局，共18局</li>
+        <li>阴遁：逆布六仪，顺布三奇</li>
+        <li>阳遁：顺布六仪，逆布三奇</li>
+      </ul>
+      <div style="margin-top:6pt;background:var(--brand-tint);padding:3mm 4mm;border-radius:2pt;">
+        <p style="font-size:9pt;"><span class="highlight">六仪：</span>戊、己、庚、辛、壬、癸</p>
+        <p style="font-size:9pt;"><span class="highlight">三奇：</span>乙、丙、丁</p>
+      </div>
+      <div style="margin-top:6pt;">
+        <div class="section-header">四盘顺序</div>
+        <p style="font-size:10pt;color:var(--brand);">先布地盘 → 天盘 → 人盘 → 神盘</p>
+      </div>
+      <div style="margin-top:6pt;">
+        <div class="section-header">定局六步</div>
+        <div class="grid-2" style="font-size:8.5pt;margin-top:2pt;">
+          <div>
+            <p>① 查四柱天干地支</p>
+            <p>② 定阴阳遁（节气）</p>
+            <p>③ 找元数（日旬首定符头）</p>
+          </div>
+          <div>
+            <p>④ 布地盘三奇六仪</p>
+            <p>⑤ 找值符值使</p>
+            <p>⑥ 天盘·人盘·神盘演局</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="flex:0.8;">
+      <div class="section-header">二十四节气定局</div>
+      <div style="font-size:8pt;background:var(--ivory);border:0.5pt solid var(--border);border-radius:2pt;padding:3mm;">
+        <p><b>阳遁：</b>冬至一七四 小寒二八五 大寒三九六</p>
+        <p>立春八五二 雨水九六三 惊蛰一七四</p>
+        <p>春分三九六 清明四一七 谷雨五二八</p>
+        <p>立夏四一七 小满五二八 芒种六三九</p>
+        <p style="margin-top:3pt;"><b>阴遁：</b>夏至九三六 小暑八二五 大暑七一四</p>
+        <p>立秋二五八 处暑一四七 白露九三六</p>
+        <p>秋分七一四 寒露六九三 霜降五八二</p>
+        <p>立冬六九三 小雪五八二 大雪四七一</p>
+      </div>
+    </div>
+  </div>
+  <div class="page-num">03</div>
+</div>
+
+<!-- ===== SLIDE 4: 阴遁5局 + 图表 ===== -->
+<div class="slide">
+  <div class="title-bar">阴遁5局实例 · 庚午时 <span>2010年11月25日12:06  |  庚寅年 丁亥月 己卯日 庚午时</span></div>
+  <div class="content" style="height:115mm;">
+    <div class="chart-col" style="width:200mm;">
+      <div class="chart-box">
+        {{CHART_YINDUN5}}
+      </div>
+    </div>
+    <div class="text-col" style="font-size:8.5pt;">
+      <div class="section-header">起局步骤</div>
+      <p><b>①</b> 日干己 → 甲己日子时起甲 → 推得庚午时</p>
+      <p><b>②</b> 小雪节气 → 阴遁</p>
+      <p><b>③</b> 日旬首甲戌 → 辰戌下元，日后五推上元 → 阴5局</p>
+      <p><b>④</b> 值符：天禽星（中5宫）</p>
+      <p><b>⑤</b> 值使：死门</p>
+      <div style="margin-top:4pt;background:var(--brand-tint);padding:2mm 3mm;border-radius:2pt;">
+        <p><span class="highlight">旬空：</span>戌亥（时空）/ 酉申（日空）</p>
+        <p><span class="highlight">三传：</span>初→地盘值符宫 / 中→天盘值符 / 末→值使宫</p>
+      </div>
+      <div style="margin-top:4pt;">
+        <p style="font-size:8pt;color:var(--olive);">图中每宫标注：八神（红）· 九星（蓝）· 八门（青）· 天盘干（黑大）· 地盘干（灰小）</p>
+      </div>
+    </div>
+  </div>
+  <div class="page-num">04</div>
+</div>
+
+<!-- ===== SLIDE 5: 12神将 ===== -->
+<div class="slide">
+  <div class="title-bar">12神将用法（壬遁法）<span>神将吉凶含义 · 掐指辨吉凶</span></div>
+  <div style="margin-top:4mm;">
+    <div class="section-header">神将总览</div>
+    <div class="grid-3" style="font-size:8.5pt;">
+      <div class="card"><h4>子 · 贵神<span style="color:green;margin-left:4mm;">吉</span></h4><p>贵人、官员、钱财</p></div>
+      <div class="card"><h4>丑 · 天厄<span style="color:red;margin-left:4mm;">凶</span></h4><p>暗疾、阻碍、破财</p></div>
+      <div class="card"><h4>寅 · 权衡<span style="color:green;margin-left:4mm;">吉</span></h4><p>权威、权力、公检法</p></div>
+      <div class="card"><h4>卯 · 破损<span style="color:red;margin-left:4mm;">凶</span></h4><p>破财、开支、大方</p></div>
+      <div class="card"><h4>辰 · 奸私<span style="color:orange;margin-left:4mm;">半凶</span></h4><p>自私、奸诈、暗昧</p></div>
+      <div class="card"><h4>巳 · 文曲<span style="color:green;margin-left:4mm;">吉</span></h4><p>聪明好学、文书印信</p></div>
+      <div class="card"><h4>午 · 天福<span style="color:green;margin-left:4mm;">吉</span></h4><p>官方、书信、酒席</p></div>
+      <div class="card"><h4>未 · 驿马<span style="color:orange;margin-left:4mm;">次吉</span></h4><p>变动、出行、女人</p></div>
+      <div class="card"><h4>申 · 劳孤<span style="color:orange;margin-left:4mm;">半凶</span></h4><p>忙碌、劳苦、孤单</p></div>
+      <div class="card"><h4>酉 · 性躁<span style="color:red;margin-left:4mm;">凶</span></h4><p>生气、口舌、掌实权</p></div>
+      <div class="card"><h4>戌 · 技巧<span style="color:green;margin-left:4mm;">吉</span></h4><p>技术、艺术、五金机械</p></div>
+      <div class="card"><h4>亥 · 长寿<span style="color:orange;margin-left:4mm;">次吉</span></h4><p>拖拉、倔强、不干脆</p></div>
+    </div>
+    <div style="display:flex;gap:8mm;margin-top:4pt;font-size:9pt;">
+      <div><b>布将：</b>月将加值使门 → 阳顺阴逆飞九宫</div>
+      <div><b>掌诀：</b>日月时行宫推演，逢冲主变</div>
+    </div>
+  </div>
+  <div class="page-num">05</div>
+</div>
+
+<!-- ===== SLIDE 6: 隐干 + 占卜定律 ===== -->
+<div class="slide">
+  <div class="title-bar">隐干用法 & 占卜发用定律 <span>四种隐干 · 年命/日干/时干/用神宫</span></div>
+  <div class="grid-2" style="margin-top:4mm;">
+    <div>
+      <div class="section-header">四种隐干</div>
+      <div style="font-size:9pt;">
+        <p><b>天盘隐干</b> ← 天盘星原宫地盘干（遗传基因）</p>
+        <p style="padding-left:8mm;">主现在·显露之事</p>
+        <p style="margin-top:3pt;"><b>人盘隐干</b> ← 八门原宫地盘干</p>
+        <p style="padding-left:8mm;">主八门隐藏状态</p>
+        <p style="margin-top:3pt;"><b>暗干</b> ← 时干加值使门阳顺阴逆</p>
+        <p style="padding-left:8mm;">三角交叉点显示隐藏信息</p>
+        <p style="margin-top:3pt;"><b>应期干</b> ← 时干加中宫</p>
+        <p style="padding-left:8mm;">判断时间应期</p>
+      </div>
+    </div>
+    <div>
+      <div class="section-header">占卜发用 · 四宫定律</div>
+      <div style="font-size:9pt;">
+        <p><b>年命宫：</b>自身宫，信息大于日干一半</p>
+        <p style="padding-left:8mm;">年命+坐宫+日干+时干+日支同宫=自身宫</p>
+        <p style="margin-top:3pt;"><b>日干宫：</b>求测者目前状态</p>
+        <p style="padding-left:8mm;">需与年命/日支/方位重合才准确</p>
+        <p style="margin-top:3pt;"><b>时干宫：</b>求测人目前事情状态</p>
+        <p style="padding-left:8mm;">时干+用神同宫 → 才代表求测事</p>
+        <p style="margin-top:3pt;"><b>用神宫：</b>用神+年命同宫为准确</p>
+        <p style="margin-top:3pt;"><b>明宫·暗宫：</b>年命宫=明 / 对宫=暗</p>
+      </div>
+    </div>
+  </div>
+  <div class="page-num">06</div>
+</div>
+
+<!-- ===== SLIDE 7: 六亲 ===== -->
+<div class="slide">
+  <div class="title-bar">六亲占卜秘诀 <span>核心重要 · 不用找用神</span></div>
+  <div class="grid-2" style="margin-top:4mm;">
+    <div>
+      <div class="section-header">男命六亲（年命壬为例）</div>
+      <div style="background:var(--ivory);border:0.5pt solid var(--border);border-radius:2pt;padding:3mm 4mm;font-size:9pt;">
+        <p><b>妻子</b> → 他克不同性（壬→丁）</p>
+        <p><b>第三者</b> → 他克同性（壬→丙）</p>
+        <p><b>父亲</b> → 生他同性（壬→庚）</p>
+        <p><b>母亲</b> → 生他不同性（壬→辛）</p>
+        <p><b>儿子</b> → 他生同性（壬→戊）</p>
+        <p><b>女儿</b> → 他生不同性（壬→己）</p>
+        <p style="margin-top:3pt;border-top:0.5pt solid var(--border);padding-top:3pt;">
+        <b>官位</b> → 克他不同性 · <b>小人</b> → 克他同性</p>
+      </div>
+    </div>
+    <div>
+      <div class="section-header">女命六亲（年命丙为例）</div>
+      <div style="background:var(--ivory);border:0.5pt solid var(--border);border-radius:2pt;padding:3mm 4mm;font-size:9pt;">
+        <p><b>丈夫</b> → 克她不同性（丙→癸）</p>
+        <p><b>第三者</b> → 克她同性（丙→壬）</p>
+        <p><b>母亲</b> → 生她同性（丙→己）</p>
+        <p><b>父亲</b> → 生她不同性（丙→戊）</p>
+        <p><b>女儿</b> → 她生同性（丙→戊）</p>
+        <p><b>儿子</b> → 她生不同性（丙→己）</p>
+        <p style="margin-top:3pt;border-top:0.5pt solid var(--border);padding-top:3pt;">
+        <b>官位</b> → 她克不同性 · <b>小人</b> → 她克同性</p>
+      </div>
+      <p style="font-size:8.5pt;margin-top:3pt;color:var(--olive);">
+      <span class="highlight">关键：</span>夫妻同宫感情不好 · 对宫相冲感情变动</p>
+    </div>
+  </div>
+  <div class="page-num">07</div>
+</div>
+
+<!-- ===== SLIDE 8: 流年 + 婚姻 ===== -->
+<div class="slide">
+  <div class="title-bar">流年运势 & 婚姻合婚 <span>太岁生克 · 合婚断法</span></div>
+  <div style="display:flex;gap:8mm;margin-top:4mm;">
+    <div style="flex:1;">
+      <div class="section-header">流年吉凶判断</div>
+      <div style="font-size:9pt;">
+        <p><span class="tag">年命克太岁</span> 有灾，伤灾破财，注意出行</p>
+        <p><span class="tag">太岁克年命</span> 有灾（较轻）</p>
+        <p><span class="tag">太岁生年命</span> 大吉，大胆去做</p>
+        <p><span class="tag">年命生太岁</span> 付出大，开支大</p>
+        <p><span class="tag">年命同太岁</span> 平平之象</p>
+        <p style="margin-top:4pt;">太岁宫门星信息 = 具体事物</p>
+      </div>
+    </div>
+    <div style="flex:1;">
+      <div class="section-header">婚姻占卜</div>
+      <div style="font-size:9pt;">
+        <p><b>合婚：</b>相生不落空→好 / 相克→败</p>
+        <p><b>感情状态：</b></p>
+        <p style="padding-left:6mm;">乙奇女方、庚为男方</p>
+        <p style="padding-left:6mm;">乙庚相克/同宫=感情不好</p>
+        <p style="padding-left:6mm;">乙下临辛=女方要走</p>
+        <p style="padding-left:6mm;">庚下临丁=男方有第三者</p>
+        <p><b>家庭状态：</b>休门为整体气氛</p>
+        <p><b>婚姻缘：</b>六合主整体，落空=感情破裂</p>
+      </div>
+    </div>
+  </div>
+  <div class="page-num">08</div>
+</div>
+
+<!-- ===== SLIDE 9: 工作 ===== -->
+<div class="slide">
+  <div class="title-bar">工作占卜秘诀 <span>升职 · 调换工作 · 内部问题</span></div>
+  <div class="grid-2" style="margin-top:4mm;">
+    <div>
+      <div class="section-header">开门为主用神</div>
+      <div style="font-size:9pt;">
+        <p><span class="tag">开门被制</span> 有压力不顺</p>
+        <p><span class="tag">开门门迫</span> 不稳定易调</p>
+        <p><span class="tag">开门落空</span> 迷茫无力</p>
+        <p><span class="tag">开门入墓(8宫)</span> 没发展活力</p>
+      </div>
+      <div class="section-header" style="margin-top:4pt;">六亲官位</div>
+      <div style="font-size:9pt;">
+        <p><b>男：</b>克他不同性=官 / 同性=小人</p>
+        <p><b>女：</b>她克不同性=官 / 同性=小人</p>
+        <p>工作贵人=官宫 · 小人=鬼位</p>
+      </div>
+    </div>
+    <div>
+      <div class="section-header">用神分类</div>
+      <div style="font-size:8.5pt;display:grid;grid-template-columns:1fr 1fr;gap:2pt;">
+        <p><span class="tag">公务员</span> 休门</p><p><span class="tag">技术</span> 杜门</p>
+        <p><span class="tag">店铺</span> 开门</p><p><span class="tag">教育</span> 天辅星</p>
+        <p><span class="tag">房地产</span> 生门</p><p><span class="tag">交通</span> 伤门</p>
+        <p><span class="tag">书店</span> 景门</p><p><span class="tag">公安</span> 白虎</p>
+      </div>
+      <div class="section-header" style="margin-top:4pt;">主客时机</div>
+      <div style="font-size:8.5pt;">
+        <p>天盘克地盘 / 地盘生天盘 → <span class="highlight">利客</span>（宜动）</p>
+        <p>反之 → <span class="highlight">利主</span>（宜静）</p>
+      </div>
+    </div>
+  </div>
+  <div class="page-num">09</div>
+</div>
+
+<!-- ===== SLIDE 10: 财运 + 投资 ===== -->
+<div class="slide">
+  <div class="title-bar">财运与投资占卜 <span>求财方位 · 投资时机 · 商业决策</span></div>
+  <div class="grid-2" style="margin-top:4mm;">
+    <div>
+      <div class="section-header">财运四看法</div>
+      <div style="font-size:9pt;">
+        <p><b>① 年命宫</b> → 运势根基</p>
+        <p><b>② 甲子戊落宫</b> → 财产整体</p>
+        <p style="padding-left:8mm;">戊击刑/戊+辛=破财</p>
+        <p style="padding-left:8mm;">戊临壬=钱财困</p>
+        <p><b>③ 生门落宫</b> → 利润</p>
+        <p style="padding-left:8mm;">被制=不得力 / 门迫=有变</p>
+        <p><b>④ 六亲财位</b> → 男：他克同性</p>
+      </div>
+    </div>
+    <div>
+      <div class="section-header">投资七步决策法</div>
+      <div style="font-size:8.5pt;">
+        <p><b>①</b> 戊（固有资金）→ 天盘落宫</p>
+        <p><b>②</b> 生门（利润）→ 落宫吉凶</p>
+        <p><b>③</b> 年命（运气）→ 运势好坏</p>
+        <p><b>④</b> 六合+合作方年命</p>
+        <p><b>⑤</b> 生门与戊的生克关系</p>
+        <p><b>⑥</b> 三传 → 发展过程</p>
+        <p><b>⑦</b> 主客 → 实际时机</p>
+      </div>
+      <p style="font-size:8pt;margin-top:4pt;color:var(--olive);">
+      <span class="highlight">核心：</span>戊不可投击刑入墓，生门被制利润不理想</p>
+    </div>
+  </div>
+  <div class="page-num">10</div>
+</div>
+
+<!-- ===== SLIDE 11: 三传 ===== -->
+<div class="slide">
+  <div class="title-bar">三传用法秘诀（壬遁结合法）<span>初传 · 中传 · 末传 —— 事物发展三部曲</span></div>
+  <div style="display:flex;gap:8mm;margin-top:4mm;">
+    <div style="flex:1;">
+      <div class="section-header">三传结构</div>
+      <div style="background:var(--ivory);border:0.5pt solid var(--border);border-radius:2pt;padding:3mm;font-size:9pt;">
+        <p style="text-align:center;font-size:11pt;color:var(--brand);">
+        初传 <span style="color:var(--stone);">→</span> 中传 <span style="color:var(--stone);">→</span> 末传
+        </p>
+        <p style="text-align:center;font-size:8pt;color:var(--olive);">
+        地盘值符宫 <span style="color:var(--stone);">→</span> 天盘值符宫 <span style="color:var(--stone);">→</span> 值使门落宫
+        </p>
+        <p style="text-align:center;font-size:8pt;color:var(--olive);">
+        开始 <span style="color:var(--stone);">→</span> 过程 <span style="color:var(--stone);">→</span> 结束
+        </p>
+      </div>
+      <div class="section-header" style="margin-top:4pt;">落宫分析</div>
+      <div style="font-size:8.5pt;">
+        <p><span class="tag">三传同宫</span> 伏吟，拖沓，抓源头</p>
+        <p><span class="tag">初+中同宫</span> 开始与中间密不可分</p>
+        <p><span class="tag">初+末同宫</span> 首尾呼应，重视开始</p>
+        <p><span class="tag">中+末同宫</span> 关键在中间阶段</p>
+      </div>
+    </div>
+    <div style="flex:1;">
+      <div class="section-header">策划应用</div>
+      <div style="font-size:9pt;">
+        <p><span class="tag">天盘克地盘</span> = 利客 → 主动去做</p>
+        <p><span class="tag">地盘克天盘</span> = 利主 → 谨慎行事</p>
+      </div>
+      <div class="section-header" style="margin-top:4pt;">应期判断</div>
+      <div style="font-size:8.5pt;">
+        <p>初生中、中生末 → 慢，拖沓</p>
+        <p>三传同宫（伏吟）→ 慢</p>
+        <p>初末同宫（反吟）→ 快</p>
+        <p>初克中、中克末 → 发展快</p>
+        <p>末传落宫数 = 事情结束天数</p>
+      </div>
+    </div>
+  </div>
+  <div class="page-num">11</div>
+</div>
+
+<!-- ===== SLIDE 12: 胎产 ===== -->
+<div class="slide">
+  <div class="title-bar">胎产断男女秘诀 <span>主客法 · 直接占测与间接占测</span></div>
+  <div style="display:flex;gap:10mm;margin-top:4mm;">
+    <div style="flex:1;">
+      <div class="section-header">关键区分</div>
+      <div style="font-size:9pt;">
+        <p><span class="tag">直接占测</span> 孕妇自己问 → 直接看坤宫</p>
+        <p><span class="tag">间接占测</span> 亲属代问 → 用六亲找对应宫</p>
+      </div>
+      <div class="section-header" style="margin-top:4pt;">判断步骤</div>
+      <div style="background:var(--ivory);border:0.5pt solid var(--border);border-radius:2pt;padding:3mm;font-size:9pt;">
+        <p><b>①</b> 看坤宫天盘星阴阳</p>
+        <p style="padding-left:8mm;">阳星：蓬、任、冲、辅</p>
+        <p style="padding-left:8mm;">阴星：英、芮、柱、心</p>
+        <p><b>②</b> 星与天干阴阳相同 → 直接定</p>
+        <p style="padding-left:8mm;">阳星阳干=男 / 阴星阴干=女</p>
+        <p><b>③</b> 星与天干不同 → 改看八门阴阳</p>
+      </div>
+      <p style="font-size:8pt;margin-top:4pt;color:var(--olive);">
+      <span class="highlight">胎的判断：</span>年命/日干处于十天干"胎"状态 = 已怀孕</p>
+    </div>
+    <div style="flex:1;">
+      <div class="section-header">示例</div>
+      <div style="background:var(--brand-tint);border:0.5pt solid var(--border);border-radius:2pt;padding:3mm;font-size:8.5pt;">
+        <p><b>直接占例：</b>1978年女，阳4局</p>
+        <p>坤宫天蓬星（阳星）+ 丁（阴干）</p>
+        <p>星与干不同 → 改看八门</p>
+        <p>休门（阳门）→ <span class="highlight">男孩 ✓</span></p>
+        <hr style="border:0.5pt solid var(--border);margin:3pt 0;">
+        <p><b>间接占例：</b>1983男代问妻生产</p>
+        <p>用六亲推：女→丙，兄弟→丁，其妻→庚</p>
+        <p>8宫天辅星（阳）+ 庚（阳）+ 伤门（阳）</p>
+        <p>→ <span class="highlight">男孩 ✓</span></p>
+      </div>
+    </div>
+  </div>
+  <div class="page-num">12</div>
+</div>
+
+<!-- ===== SLIDE 13: 阳宅 ===== -->
+<div class="slide">
+  <div class="title-bar">阳宅风水占卜 <span>全面解剖 · 不到场全知道</span></div>
+  <div style="display:flex;gap:6mm;margin-top:4mm;">
+    <div style="flex:0.6;">
+      <div class="section-header">十个判断维度</div>
+      <div style="font-size:8.5pt;">
+        <p><b>①</b> 生门宫 → 地理环境</p>
+        <p><b>②</b> 坐向(坎离) → 九星旺衰</p>
+        <p><b>③</b> 值使门 → 大门口</p>
+        <p><b>④</b> 值符宫 → 坐山人丁</p>
+        <p><b>⑤</b> 乙奇 → 左青龙砂</p>
+        <p><b>⑥</b> 辛 → 右白虎砂</p>
+        <p><b>⑦</b> 壬 → 来水财运</p>
+        <p><b>⑧</b> 癸 → 厕所去水</p>
+        <p><b>⑨</b> 丙 → 灶厨房</p>
+        <p><b>⑩</b> 丁 → 香火神位</p>
+      </div>
+      <p style="font-size:8pt;margin-top:4pt;color:var(--brand);">
+      一流先生看星斗</p>
+    </div>
+    <div style="flex:0.5;">
+      <div class="section-header">宫位断诀</div>
+      <div style="font-size:8pt;">
+        <p>1宫→潮湿有水 &nbsp; 2宫→土地平稳</p>
+        <p>3宫→乱石不活跃 &nbsp; 6宫→地脉好</p>
+        <p>7宫→小水流 &nbsp; 8宫→山地强固</p>
+        <p>9宫→采光好</p>
+      </div>
+      <div class="section-header" style="margin-top:3pt;">青龙白虎</div>
+      <div style="font-size:8pt;">
+        <p><span class="highlight">龙抱虎出知府</span></p>
+        <p>青龙高=男性得力</p>
+        <p>白虎高=女性掌权</p>
+      </div>
+    </div>
+    <div style="flex:1;">
+      <div class="chart-box" style="width:100%;">
+        {{CHART_YANG7}}
+      </div>
+    </div>
+  </div>
+  <div class="page-num">13</div>
+</div>
+
+<!-- ===== SLIDE 14: 阴宅 ===== -->
+<div class="slide">
+  <div class="title-bar">阴宅风水占卜 <span>坟地吉凶 · 先人保佑 · 来龙地脉</span></div>
+  <div style="display:flex;gap:6mm;margin-top:4mm;">
+    <div style="flex:1;">
+      <div class="chart-box" style="width:100%;">
+        {{CHART_YINZHAI}}
+      </div>
+    </div>
+    <div style="flex:0.6;">
+      <div class="section-header">九个判断维度</div>
+      <div style="font-size:8pt;">
+        <p><b>①</b> 死门宫 → 坟地整体</p>
+        <p><b>②</b> 死门天地盘 → 先人保佑</p>
+        <p><b>③</b> 值使门 → 明堂</p>
+        <p><b>④</b> 白虎 → 墓碑</p>
+        <p><b>⑤</b> 值符宫 → 来龙吉凶</p>
+        <p><b>⑥</b> 乙奇 → 青龙砂（男丁）</p>
+        <p><b>⑦</b> 辛 → 白虎砂（女丁）</p>
+        <p><b>⑧</b> 壬 → 来水财运</p>
+        <p><b>⑨</b> 地盘值符 → 地脉</p>
+      </div>
+      <div style="background:var(--brand-tint);border-radius:2pt;padding:2mm 3mm;margin-top:3pt;font-size:8pt;">
+        <p><span class="highlight">地盘生天盘</span> = 先人保佑后代</p>
+        <p><span class="highlight">死门落空</span> = 无龙气</p>
+        <p><span class="highlight">龙抱虎</span>出知府 · 虎抱龙万事凶</p>
+      </div>
+    </div>
+  </div>
+  <div class="page-num">14</div>
+</div>
+
+<!-- ===== SLIDE 15: 择吉 ===== -->
+<div class="slide">
+  <div class="title-bar">奇门择吉 · 看日子时辰方位 <span>时空合一 · 吉格选择法</span></div>
+  <div class="grid-2" style="margin-top:4mm;">
+    <div>
+      <div class="section-header">择吉步骤</div>
+      <div style="font-size:9pt;">
+        <p>① 起念起局 → 时空合一</p>
+        <p>② 找吉格（无击刑、入墓、门迫）</p>
+        <p>③ 选宫：开门(开业) / 生门(盖房) / 值符宫</p>
+      </div>
+      <div class="section-header" style="margin-top:4pt;">吉格选要</div>
+      <div style="font-size:8.5pt;">
+        <p><span class="tag">天遁</span> 丙+生门+丁 → 百事俱吉</p>
+        <p><span class="tag">地遁</span> 乙+开门+己 → 造屋埋葬吉</p>
+        <p><span class="tag">人遁</span> 太阴+丁+休门 → 万事吉利</p>
+        <p><span class="tag">龙回首</span> 甲值符+丙 → 百事吉</p>
+        <p><span class="tag">鸟跌穴</span> 丙+甲值符 → 百战百胜</p>
+      </div>
+    </div>
+    <div>
+      <div class="section-header">选日干五行法</div>
+      <div style="background:var(--ivory);border:0.5pt solid var(--border);border-radius:2pt;padding:3mm;font-size:9pt;">
+        <p><span class="tag" style="background:green;color:white;">宝日</span> 日干生日支 → 大吉</p>
+        <p><span class="tag" style="background:#2D5A8A;color:white;">义日</span> 日支生日干 → 次吉</p>
+        <p><span class="tag" style="background:#2D5A8A;color:white;">和日</span> 比和 → 次吉</p>
+        <p><span class="tag">制日</span> 日干克日支 → 平日</p>
+        <p><span class="tag" style="background:red;color:white;">伐日</span> 日支克日干 → 凶</p>
+      </div>
+      <div class="section-header" style="margin-top:4pt;">时辰选择</div>
+      <div style="font-size:8.5pt;">
+        <p>以宫内地支选时辰</p>
+        <p>避免<span class="highlight">五不遇时</span>（时干克日干）</p>
+      </div>
+    </div>
+  </div>
+  <div class="page-num">15</div>
+</div>
+
+<!-- ===== SLIDE 16: 奇门外应 ===== -->
+<div class="slide">
+  <div class="title-bar">奇门外应看法秘诀 <span>直接判断 · 间接判断 · 118种外应</span></div>
+  <div style="display:flex;gap:8mm;margin-top:4mm;">
+    <div style="flex:1;">
+      <div class="section-header">两种判断角度</div>
+      <div style="font-size:9pt;">
+        <p><b>直接判断：</b>外应本身即结论</p>
+        <p style="padding-left:8mm;">例：占婚姻忽来一人 → 有插足者</p>
+        <p style="padding-left:8mm;">例：占升职路上上坡 → 上升之象</p>
+        <p style="margin-top:3pt;"><b>间接判断：</b>外应入奇门局分析</p>
+        <p style="padding-left:8mm;">黑衣（1宫）/ 到东方（3宫）</p>
+        <p style="padding-left:8mm;">黄衣女 → 看9宫</p>
+      </div>
+      <div class="section-header" style="margin-top:4pt;">常见外应选</div>
+      <div style="font-size:7.5pt;display:grid;grid-template-columns:1fr 1fr;gap:1pt;">
+        <p>云开见日 → 事必争辉</p>
+        <p>震雷 → 虚惊</p>
+        <p>水流 → 亨通顺利</p>
+        <p>坚石 → 坚定成功</p>
+        <p>松柏 → 健康长寿</p>
+        <p>乌鸦 → 灾将至</p>
+        <p>喜鹊 → 喜将至</p>
+        <p>见猿爬树 → 心神难宁</p>
+        <p>路逢医生 → 危中有救</p>
+        <p>酒杯忽破 → 乐极生悲</p>
+      </div>
+    </div>
+    <div style="flex:1;">
+      <div class="section-header">杂占用法</div>
+      <div style="font-size:9pt;">
+        <p><b>考试：</b>天芮(学生)+天辅(部门)+丁(试卷)</p>
+        <p style="padding-left:8mm;">天芮克天辅=能考上</p>
+        <p style="margin-top:3pt;"><b>走失：</b>年命宫看平安，六合看方位</p>
+        <p style="margin-top:3pt;"><b>疾病：</b>年命+天芮星=病因，三传=发展</p>
+        <p style="margin-top:3pt;"><b>凶杀：</b>死门=死人，庚=杀人犯</p>
+        <p style="padding-left:8mm;">庚所在方位=凶手位置</p>
+        <p style="margin-top:3pt;"><b>盗贼：</b>玄武=小偷，天蓬=大盗</p>
+      </div>
+      <div class="section-header" style="margin-top:4pt;">盘式含义</div>
+      <div style="font-size:8pt;display:grid;grid-template-columns:1fr 1fr;gap:2pt;">
+        <p><b>值符</b> 领导钱财</p>
+        <p><b>螣蛇</b> 压力反复</p>
+        <p><b>太阴</b> 隐私女人</p>
+        <p><b>六合</b> 合作婚姻</p>
+        <p><b>白虎</b> 血光争斗</p>
+        <p><b>玄武</b> 小偷小人</p>
+        <p><b>九地</b> 沉稳主静</p>
+        <p><b>九天</b> 直爽主动</p>
+      </div>
+    </div>
+  </div>
+  <div class="page-num">16</div>
+</div>
+
+<!-- ===== SLIDE 17: 符箓 ===== -->
+<div class="slide">
+  <div class="title-bar">民间奇门法术 · 四纵五横符箓 <span>地理避凶 · 开工动土用法</span></div>
+  <div style="display:flex;gap:8mm;margin-top:4mm;align-items:center;">
+    <div style="flex:0.6;text-align:center;">
+      <div style="background:var(--ivory);border:0.5pt solid var(--border);border-radius:2pt;padding:8mm;display:inline-block;">
+        <div style="border:1pt solid var(--brand);padding:6mm;position:relative;">
+          <div style="position:relative;width:120pt;height:120pt;">
+            <div style="position:absolute;left:50%;top:0;width:1pt;height:100%;background:var(--brand);"></div>
+            <div style="position:absolute;top:50%;left:0;width:100%;height:1pt;background:var(--brand);"></div>
+            <div style="position:absolute;left:0;top:0;width:50%;height:50%;border-bottom:1pt solid var(--brand);border-right:1pt solid var(--brand);"></div>
+            <div style="position:absolute;right:0;top:0;width:50%;height:50%;border-bottom:1pt solid var(--brand);border-left:1pt solid var(--brand);"></div>
+            <div style="position:absolute;left:0;bottom:0;width:50%;height:50%;border-top:1pt solid var(--brand);border-right:1pt solid var(--brand);"></div>
+            <div style="position:absolute;right:0;bottom:0;width:50%;height:50%;border-top:1pt solid var(--brand);border-left:1pt solid var(--brand);"></div>
+            <div style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font-size:9pt;color:var(--brand);font-weight:bold;">符</div>
+          </div>
+        </div>
+      </div>
+      <p style="font-size:8pt;color:var(--olive);margin-top:4pt;">四纵五横符箓</p>
+    </div>
+    <div style="flex:1;">
+      <div class="section-header">用法</div>
+      <div style="font-size:9pt;">
+        <p>① 黄纸朱砂书符，念咒语</p>
+        <p>② 开工动工时 → 贴于动工处</p>
+        <p>③ 触犯煞神时 → 剑指或三尖香</p>
+        <p style="padding-left:8mm;">空书此符并念：</p>
+        <p style="padding-left:8mm;font-size:10pt;color:var(--brand);">
+        "天无忌，地无忌，阴阳无忌，百无禁忌"</p>
+      </div>
+      <p style="font-size:8pt;color:red;margin-top:4pt;">
+      ※ 注意：不可对着神像书画</p>
+    </div>
+  </div>
+  <div class="page-num">17</div>
+</div>
+
+<!-- ===== SLIDE 18: END ===== -->
+<div class="slide" style="display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;">
+  <div style="background:var(--brand);padding:10mm 20mm;border-radius:3pt;width:80%;">
+    <h2 style="color:white;font-size:26pt;margin-bottom:6pt;">祝愿各位学有所成</h2>
+    <p style="color:#ccd;font-size:14pt;">真传一句话 · 假传万卷书</p>
+    <p style="color:#99a;font-size:10pt;margin-top:10pt;">集民间之大成 · 汇百家之精髓</p>
+    <p style="color:#99a;font-size:10pt;margin-top:4pt;">成慈老师 · 2024年奇门遁甲高级研讨班</p>
+  </div>
+  <div class="page-num">18</div>
+</div>
+
+</body>
+</html>

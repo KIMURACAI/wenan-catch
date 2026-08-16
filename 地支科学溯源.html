@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>地支科学溯源</title>
+<meta name="author" content="Kami">
+<meta name="description" content="从科学视角和考古文史角度讲十二地支的由来——客观起源、数字由来、演变，剔除神话。">
+<meta name="keywords" content="地支, 十二地支, 科学, 天文, 考古, 历法, 十二生肖">
+<meta name="generator" content="Kami">
+<style>
+  @font-face { font-family: "TsangerJinKai02"; src: url("https://cdn.jsdelivr.net/gh/tw93/Kami@main/assets/fonts/TsangerJinKai02-W04.ttf") format("truetype"); font-weight: 400; }
+  @font-face { font-family: "TsangerJinKai02"; src: url("https://cdn.jsdelivr.net/gh/tw93/Kami@main/assets/fonts/TsangerJinKai02-W05.ttf") format("truetype"); font-weight: 500; }
+  @page { size: A4; margin: 14mm 18mm 18mm 18mm; background: #f5f4ed;
+    @top-right { content: string(section-title); font-family: "TsangerJinKai02","Source Han Serif SC","Noto Serif CJK SC","Songti SC",Georgia,serif; font-size: 7.5pt; color: #6b6a64; }
+    @bottom-center { content: counter(page); font-family: "TsangerJinKai02","Source Han Serif SC","Noto Serif CJK SC","Songti SC",Georgia,serif; font-size: 8pt; color: #6b6a64; } }
+  @page:first { @top-right { content: ""; } @bottom-center { content: ""; } }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  :root { --parchment: #f5f4ed; --ivory: #faf9f5; --near-black:#141413; --dark-warm: #3d3d3a; --olive: #504e49; --stone: #6b6a64; --brand: #1B365D; --border: #e8e6dc; --border-soft:#e5e3d8; --tag-bg: #E4ECF5; --serif: "TsangerJinKai02","Source Han Serif SC","Noto Serif CJK SC","Songti SC","STSong",Georgia,serif; --sans: var(--serif); }
+  html, body { background: var(--parchment); }
+  @media screen { body { max-width: 210mm; margin: 0 auto; padding: 14mm 18mm 18mm 18mm; } }
+  body { color: var(--near-black); font-family: var(--serif); font-size: 10pt; line-height: 1.5; letter-spacing: 0.2pt; widows: 2; orphans: 2; }
+
+  .cover { min-height: 180mm; display: flex; flex-direction: column; justify-content: space-between; padding: 30mm 0 0 0; break-after: page; }
+  .cover-eyebrow { display: inline-flex; align-items: center; gap: 6pt; font-family: var(--sans); font-size: 9pt; color: var(--brand); letter-spacing: 1pt; text-transform: uppercase; font-weight: 500; margin-bottom: 14pt; }
+  .cover-eyebrow::before { content: ""; width: 8pt; height: 1.5pt; border-radius: 0.75pt; background: var(--brand); flex-shrink: 0; }
+  .cover-title { font-size: 30pt; font-weight: 500; color: var(--near-black); line-height: 1.15; letter-spacing: 0.2pt; margin-bottom: 12pt; }
+  .cover-sub { font-family: var(--sans); font-size: 12pt; color: var(--olive); line-height: 1.4; max-width: 85%; margin-bottom: 24pt; }
+  .cover-meta { font-family: var(--sans); font-size: 9pt; color: var(--stone); line-height: 1.4; }
+  .cover-meta strong { color: var(--dark-warm); font-weight: 500; }
+
+  .toc { break-after: page; }
+  .toc h2 { font-size: 18pt; font-weight: 500; margin-bottom: 10pt; border-left: 2.5pt solid var(--brand); border-radius: 1.5pt; padding-left: 8pt; }
+  .toc-item { display: flex; align-items: baseline; padding: 3.5pt 0; border-bottom: 0.3pt dotted var(--border); font-size: 10pt; }
+  .toc-item:last-of-type { border-bottom: none; }
+  .toc-num { color: var(--brand); font-weight: 500; min-width: 26pt; font-size: 9.5pt; }
+  .toc-title { flex: 1; color: var(--near-black); padding-left: 4pt; }
+
+  h1 { font-size: 18pt; font-weight: 500; line-height: 1.2; margin: 0 0 6pt 0; border-left: 2.5pt solid var(--brand); border-radius: 1.5pt; padding-left: 8pt; color: var(--near-black); break-after: avoid; string-set: section-title content(); }
+  h2 { font-size: 14pt; font-weight: 500; line-height: 1.25; margin: 16pt 0 5pt 0; color: var(--near-black); break-after: avoid; }
+  h3 { font-size: 12pt; font-weight: 500; line-height: 1.3; margin: 12pt 0 4pt 0; color: var(--dark-warm); break-after: avoid; }
+  .chapter-num { font-family: var(--sans); font-size: 8.5pt; color: var(--brand); letter-spacing: 0.8pt; text-transform: uppercase; margin-bottom: 4pt; }
+
+  p { margin: 0 0 6pt 0; line-height: 1.5; color: var(--near-black); widows: 2; orphans: 2; }
+  .lead { font-size: 11pt; line-height: 1.5; color: var(--dark-warm); margin-bottom: 10pt; }
+  .hl { color: var(--brand); font-weight: 500; }
+  strong { font-weight: 500; }
+
+  ul { margin: 3pt 0 6pt 0; padding-left: 16pt; line-height: 1.5; }
+  ul li::marker { color: var(--brand); }
+  ul li { margin-bottom: 1pt; }
+
+  table { width: 100%; border-collapse: collapse; font-size: 9pt; margin: 8pt 0; break-inside: avoid; }
+  table th { text-align: left; font-weight: 500; color: var(--dark-warm); padding: 4pt 6pt; border-bottom: 1pt solid var(--border); }
+  table td { padding: 3pt 6pt; border-bottom: 0.3pt solid var(--border-soft); vertical-align: top; }
+
+  .callout { background: var(--ivory); border-left: 2pt solid var(--brand); padding: 7pt 12pt; border-radius: 3pt; margin: 8pt 0; line-height: 1.5; break-inside: avoid; font-size: 9.5pt; }
+  .callout p { margin: 0 0 4pt 0; }
+
+  .chapter { break-before: page; }
+  .colophon { margin-top: 20pt; padding-top: 8pt; border-top: 0.5pt solid var(--border); font-size: 9pt; color: var(--stone); line-height: 1.4; }
+
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 8pt; margin: 8pt 0; }
+  .info-card { background: var(--ivory); border-left: 2pt solid var(--brand); border-radius: 3pt; padding: 6pt 10pt; }
+  .info-card .label { font-weight: 500; color: var(--brand); margin-bottom: 1pt; font-size: 9.5pt; }
+  .info-card .body { font-size: 9pt; color: var(--near-black); line-height: 1.45; }
+
+  .tl-row { display: flex; align-items: baseline; gap: 10pt; padding: 3pt 0; border-bottom: 0.3pt dotted var(--border-soft); font-size: 9.5pt; }
+  .tl-period { min-width: 70pt; font-weight: 500; color: var(--brand); font-size: 9pt; flex-shrink: 0; }
+  .tl-desc { color: var(--near-black); }
+</style>
+</head>
+<body>
+
+<section class="cover">
+  <div>
+    <div class="cover-eyebrow">科学 · 人类学 · 考古 · 天文</div>
+    <div class="cover-title">地支科学溯源</div>
+    <div class="cover-sub">科学视角 + 考古文史双角度讲十二地支的由来<br>客观起源 · 数字由来 · 演变，剔除神话</div>
+  </div>
+  <div class="cover-meta">
+    <strong>传统文化科学考源系列</strong><br>
+    版本 V1.0  ·  2026 年 7 月
+  </div>
+</section>
+
+<section class="toc">
+  <h2>目录</h2>
+  <div class="toc-item"><span class="toc-num">01</span><span class="toc-title">天文观测：地支数字"12"的客观来源</span></div>
+  <div class="toc-item"><span class="toc-num">02</span><span class="toc-title">考古：地支文字的诞生与早期用途</span></div>
+  <div class="toc-item"><span class="toc-num">03</span><span class="toc-title">史料记载：人为系统化整理</span></div>
+  <div class="toc-item"><span class="toc-num">04</span><span class="toc-title">十二生肖配套是后世附加</span></div>
+  <div class="toc-item"><span class="toc-num">05</span><span class="toc-title">天干地支搭配逻辑</span></div>
+  <div class="toc-item"><span class="toc-num">06</span><span class="toc-title">极简总结</span></div>
+</section>
+
+<section class="chapter" id="ch1">
+  <div class="chapter-num">01 · Astronomy</div>
+  <h1>天文观测：地支数字"12"的客观来源</h1>
+  <p class="lead">古人没有望远镜，靠肉眼长期观测星空，得出两个稳定的12周期。</p>
+
+  <div class="grid-2">
+    <div class="info-card">
+      <div class="label">月亮周年周期</div>
+      <div class="body">一年有12次完整月圆月缺（朔望月），对应12个月，是最直观的十二周期。</div>
+    </div>
+    <div class="info-card">
+      <div class="label">岁星（木星）公转周期</div>
+      <div class="body">木星绕太阳一圈约12年，每年停在一个星空分区。古人将黄道分成12段，叫"十二星次"，一年对应一辰，即"十二辰"。</div>
+    </div>
+  </div>
+
+  <h2>昼夜计时配套</h2>
+  <p>古人把一昼夜均分12段（时辰），一套十二符号刚好能同时标记年、月、时，<span class="hl">实用性极强</span>。</p>
+  <div class="callout"><strong>核心结论：</strong>12这个数字不是凭空编的，是日月星辰客观运行呈现的固定周期。</div>
+</section>
+
+<section class="chapter" id="ch2">
+  <div class="chapter-num">02 · Archaeology</div>
+  <h1>考古：地支文字的诞生与早期用途</h1>
+
+  <h2>出土实物年代</h2>
+  <p>商代甲骨文里只有大量天干纪日，地支极少单独使用。商末、西周时期，天干 + 地支搭配的六十甲子才完整出现。</p>
+
+  <h2>文字本源：全部是象形、写实古汉字</h2>
+  <table>
+    <thead><tr><th>地支</th><th>象形本源</th><th>生活来源</th></tr></thead>
+    <tbody>
+      <tr><td><strong>子</strong></td><td>像婴儿</td><td>人类繁衍</td></tr>
+      <tr><td><strong>丑</strong></td><td>手指扭曲</td><td>手的动作</td></tr>
+      <tr><td><strong>寅</strong></td><td>破土新芽</td><td>植物生长</td></tr>
+      <tr><td><strong>卯</strong></td><td>开门之形</td><td>门户开启</td></tr>
+      <tr><td><strong>辰</strong></td><td>石块震动</td><td>农具/自然</td></tr>
+      <tr><td><strong>巳</strong></td><td>小蛇之形</td><td>动物</td></tr>
+      <tr><td><strong>午</strong></td><td>纺锤</td><td>纺织工具</td></tr>
+      <tr><td><strong>未</strong></td><td>禾苗枝叶</td><td>农业</td></tr>
+      <tr><td><strong>申</strong></td><td>闪电</td><td>天象</td></tr>
+      <tr><td><strong>酉</strong></td><td>酒坛</td><td>酿造器具</td></tr>
+      <tr><td><strong>戌</strong></td><td>兵器（斧钺）</td><td>武器</td></tr>
+      <tr><td><strong>亥</strong></td><td>小猪</td><td>家畜</td></tr>
+    </tbody>
+  </table>
+  <p>最初只是普通生活文字，<span class="hl">没有生肖、五行属性</span>。</p>
+
+  <h2>早期核心作用</h2>
+  <p>西周之前只做两件事：① 划分一年12个月份；② 划分天上十二星区，记录木星方位。没有吉凶、鬼神、生肖说法。</p>
+</section>
+
+<section class="chapter" id="ch3">
+  <div class="chapter-num">03 · Anthropology</div>
+  <h1>史料记载：人为系统化整理</h1>
+  <p class="lead">古籍同样记载黄帝史官大挠整理干支，科学解读如下。</p>
+  <div class="callout">
+    <strong>科学解读：</strong>新石器到上古，各地部落各自有零散标记月份、星象的简易符号。到部落联盟时代，需要统一历法指导农耕、祭祀。专职观星史官汇总各地符号，结合12个月、12星次规律，筛选、规整出12个标准文字，命名十二地支，统一全国计时标准。这属于<strong>古代官方历法标准化工程</strong>，不存在天神传授。
+  </div>
+</section>
+
+<section class="chapter" id="ch4">
+  <div class="chapter-num">04 · Cultural Processing</div>
+  <h1>十二生肖配套是后世附加</h1>
+  <p class="lead">地支与动物的对应关系是后世逐步加工形成的文化现象。</p>
+  <div class="tl-row"><span class="tl-period">商周·西周</span><span class="tl-desc">地支只用来记星月，不搭配动物</span></div>
+  <div class="tl-row"><span class="tl-period">战国晚期·秦代</span><span class="tl-desc">慢慢把十二种常见动物和十二地支一一绑定</span></div>
+  <div class="tl-row"><span class="tl-period">汉代</span><span class="tl-desc">阴阳家、方士继续叠加五行、阴阳、刑冲合害</span></div>
+  <div class="tl-row"><span class="tl-period">道教兴起后</span><span class="tl-desc">附会为地脉灵文、地府神将、云篆符文，后世二次玄学加工</span></div>
+  <p>这些都不是地支诞生时自带的属性。</p>
+</section>
+
+<section class="chapter" id="ch5">
+  <div class="chapter-num">05 · Mathematical Logic</div>
+  <h1>天干地支搭配逻辑</h1>
+  <p class="lead">客观数学组合，没有玄学成分。</p>
+  <p><span class="hl">天干10个</span>、<span class="hl">地支12个</span>，最小公倍数60，自然形成六十甲子循环。古人用这套组合纪年、纪月、纪日、纪时，精准记录时间，本质是一套<strong>古代天文历法数学工具</strong>。</p>
+  <table>
+    <thead><tr><th>周期</th><th>数量</th><th>天文依据</th></tr></thead>
+    <tbody>
+      <tr><td>天干</td><td>10</td><td>一月三分、十日一旬</td></tr>
+      <tr><td>地支</td><td>12</td><td>一年十二月、木星十二年周期</td></tr>
+      <tr><td>六十甲子</td><td>60</td><td>10与12的最小公倍数</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section class="chapter" id="ch6">
+  <div class="chapter-num">06 · Summary</div>
+  <h1>极简总结</h1>
+  <div class="callout">
+    <p><strong>1. 客观根源：</strong>日月、木星运行天然存在12周期，确定数字12。</p>
+    <p><strong>2. 文字起源：</strong>上古象形文字，经上古观星史官统一整理为十二地支。</p>
+    <p><strong>3. 原始功能：</strong>纯计时、观星、指导农耕，无玄学含义。</p>
+    <p><strong>4. 五行、生肖、鬼神符文等说法：</strong>是战国至道教时期后人附加的文化解读。</p>
+  </div>
+  <div class="colophon">传统文化科学考源系列 · 本文档基于天文考古学、文字学公开研究整理。</div>
+</section>
+
+</body>
+</html>
