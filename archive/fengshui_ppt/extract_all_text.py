@@ -1,7 +1,7 @@
 """提取 output_final.pptx 中所有文本，导出为 txt"""
 from pptx import Presentation
 
-prs = Presentation('output_final.pptx')
+prs = Presentation(r'e:\wenan catch\output_final.pptx')
 
 with open(r'e:\wenan catch\ppt_all_text.txt', 'w', encoding='utf-8') as f:
     for idx, slide in enumerate(prs.slides, 1):

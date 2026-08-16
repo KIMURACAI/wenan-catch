@@ -10,7 +10,7 @@ rows = conn.execute("""
 """).fetchall()
 conn.close()
 
-with open("转写结果.txt", "w", encoding="utf-8") as f:
+with open(r"e:\wenan catch\转写结果.txt", "w", encoding="utf-8") as f:
     f.write(f"共 {len(rows)} 条转写结果\n")
     f.write("=" * 50 + "\n\n")
     for i, r in enumerate(rows, 1):

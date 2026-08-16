@@ -11,7 +11,7 @@ from pptx.oxml.ns import qn
 from lxml import etree
 
 cleaned = json.load(open(r'e:\wenan catch\cleaned_paragraphs.json', 'r', encoding='utf-8'))
-prs = Presentation('output_final.pptx')
+prs = Presentation(r'e:\wenan catch\output_final.pptx')
 
 SLIDE_W = 12188952
 SLIDE_H = 6858000
@@ -133,7 +133,7 @@ def main():
         if snum % 20 == 0:
             print(f"  ...applied {snum}")
 
-    prs.save('output_final.pptx')
+    prs.save(r'e:\wenan catch\output_final.pptx')
     print(f"\n已应用: {applied} 页")
     print(f"跳过(无正文框或空): {skipped}")
 

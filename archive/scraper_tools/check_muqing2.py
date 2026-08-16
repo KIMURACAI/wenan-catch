@@ -1,6 +1,6 @@
 """检查木清当前状态"""
 import sqlite3
-conn = sqlite3.connect("data/wenan_catch.db")
+conn = sqlite3.connect(r"E:\wenan catch\data\wenan_catch.db")
 conn.row_factory = sqlite3.Row
 
 rows = conn.execute("""

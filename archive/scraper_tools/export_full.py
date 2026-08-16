@@ -10,7 +10,7 @@ rows = conn.execute("""
 """).fetchall()
 conn.close()
 
-with open("转写结果_完整版.txt", "w", encoding="utf-8") as f:
+with open(r"e:\wenan catch\转写结果_完整版.txt", "w", encoding="utf-8") as f:
     current_target = ""
     for i, r in enumerate(rows, 1):
         target = r[0]

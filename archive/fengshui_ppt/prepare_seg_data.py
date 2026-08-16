@@ -6,7 +6,7 @@ import json
 from pptx import Presentation
 
 binding = json.load(open(r'e:\wenan catch\slide_pdf_binding.json', 'r', encoding='utf-8'))
-prs = Presentation('output_final.pptx')
+prs = Presentation(r'e:\wenan catch\output_final.pptx')
 
 output = []
 for snum, slide in enumerate(prs.slides, 1):

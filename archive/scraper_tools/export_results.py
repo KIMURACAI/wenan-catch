@@ -10,7 +10,7 @@ from datetime import datetime
 from pathlib import Path
 from collections import defaultdict
 
-DB = Path(__file__).resolve().parent / "data" / "wenan_catch.db"
+DB = Path(r"E:\wenan catch\data\wenan_catch.db")
 OUTPUT_DIR = Path.home() / "Desktop" / "抖音文案采集" / "文案"
 
 conn = sqlite3.connect(str(DB))

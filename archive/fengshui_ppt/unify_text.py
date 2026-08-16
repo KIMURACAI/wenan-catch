@@ -106,7 +106,7 @@ def process_text_frame(sh, snum):
 
 
 def main():
-    prs = Presentation('output_final.pptx')
+    prs = Presentation(r'e:\wenan catch\output_final.pptx')
     processed = 0
     for snum, slide in enumerate(prs.slides, 1):
         for sh in slide.shapes:
@@ -114,7 +114,7 @@ def main():
                 process_text_frame(sh, snum)
                 processed += 1
 
-    prs.save('output_final.pptx')
+    prs.save(r'e:\wenan catch\output_final.pptx')
     print(f"Unified fonts across {processed} text frames")
     print(f"Font: {UNIFORM_FONT}")
 

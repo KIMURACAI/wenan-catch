@@ -8,7 +8,7 @@
 from pptx import Presentation
 from pptx.util import Pt, Emu
 
-prs = Presentation('output_final.pptx')
+prs = Presentation(r'e:\wenan catch\output_final.pptx')
 SLIDE_W = 12188952
 SLIDE_H = 6858000
 
@@ -104,7 +104,7 @@ def main():
     for snum, slide in enumerate(prs.slides, 1):
         process_slide(slide, snum)
 
-    prs.save('output_final.pptx')
+    prs.save(r'e:\wenan catch\output_final.pptx')
     print(f"重排版完成: {len(prs.slides)} 页")
     print(f"跳过: {SKIP_SLIDES}")
 
